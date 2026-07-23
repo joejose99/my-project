@@ -1,0 +1,1498 @@
+  
+
+@extends('adminlte::page')
+ 
+@section('title','Dashboard')
+
+@section('content_header')
+<h1>Dashboard  <span class="welcome-heading-page">{{ Auth::user()->name }} </span></h1> 
+
+ <meta name="csrf-token" content="{{ csrf_token() }}">
+ 
+ 
+  <script type="text/javascript">
+var timer=0;
+function startTimer()
+{
+	 
+	setInterval("timerUp()",1000);
+}
+
+function timerUp()
+{
+	timer++;
+        var resetat=10; //change this number to adjust the length of time in seconds
+	if(timer==resetat)
+	{
+		  //window,location.reload();
+		getRefresh();
+		
+	}
+	var tleft=resetat-timer;
+	document.getElementById('timer').innerHTML=tleft;
+}
+	
+</script>
+ 
+ 
+ 
+@stop
+
+ 
+ 
+@section('content')
+ 
+  
+ <style type="text/css">
+ /*
+body{margin:0;font-family:Nunito,sans-serif;font-size:1.6rem;font-weight:400;line-height:1.6;color:#212529;text-align:left;background-color:#f8fafc} 
+*/
+ 
+.main-sidebar .sidebar{
+	overflow-y:hidden;
+
+} 
+ 
+ 
+
+  
+  
+ 
+ 
+/*.navbar{position:relative;padding:.5rem 1rem}.navbar,.navbar>.container,.navbar>.container-fluid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between} */
+</style>
+ 
+
+<script src="{{asset('../js/jquery-3.4.1.js') }}"></script>
+  
+ <div class="panel panel-default" >
+                <div class="panel-heading">
+                
+                
+                  <span  class="mainbody"><img src="../../image/arrow.gif" width="5" height="10" class="mainbody" />&nbsp&nbsp;Current User Login</span>
+                  
+                 <div style="float:right; width:290px; margin-top:-5px; text-align:right; display:none;"> <input name="butInsert" type="button" value="Export Data" onClick="window.location.href='insert-Lecture-Course'" class="but">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+                  
+                  
+             <div id="totSch" style="float:right; margin-top:-5px; width:54%; text-align:center;" class="mainbody">  <input name="txtsearch" disabled="disabled" type="text" id="txtSearch" class="searchTextbox" placeholder="Search First Name" onkeypress="return isNumberKey(event) " onblur="if(this.value=='' ) 
+this.value='';" onfocus="if(this.value=='Search First Name')"  > </div>
+
+
+ 
+</div>
+              
+              <div style="text-align:center; margin-top:10px;">
+              
+              
+              &nbsp;&nbsp;
+             <div style=" margin-left:10px; float:left; display:none;" class="mainbody" >
+             
+             
+              <select class="mnu" name="faculty1" id="faculty1"> 
+             
+              
+               
+                               
+                				<option  value="Select"> Select State</option>
+                                
+     </option>
+                               
+                               
+                               </select>
+             &nbsp;&nbsp;&nbsp;&nbsp; 
+              &nbsp;&nbsp; <select class="select" name="dpt1" id="dpt1"> 
+             
+              
+               
+                               
+                				<option  value="Select" > Select L.G.A</option>
+                                 
+                               
+                               
+                               </select>
+                                 
+      
+      
+      &nbsp;&nbsp;&nbsp;&nbsp; 
+              &nbsp;&nbsp; <select class="mnu" name="cls1" id="cls1"> 
+             
+              
+               
+                               
+                				<option  value="Select"> Select Channel</option>
+                               
+   <option value=""> </option>
+   
+                               
+                               
+                               </select>
+                               
+                               
+                               
+                                &nbsp;&nbsp;&nbsp;&nbsp; 
+               &nbsp;&nbsp; <select class="mnu" name="term1" id="term1"> 
+             
+              
+               
+                               
+                				<option  value="Select"> Select Store Category</option>
+                                 
+                               
+                               
+                               </select>
+                               
+                           &nbsp;&nbsp;&nbsp;&nbsp;    <label  id="SelectError"> </label>
+    </div></div>
+                
+ 
+          <div style="clear:both;" ></div>
+              
+                
+     <div class="panel-body" >
+           <input id="signup-token" name="_token" type="hidden" value="{{csrf_token()}}">     
+           <div style="  text-align:center;" > 
+     <span style="margin-left:7px; color:#4E6A9E; font-weight:bold;">
+                         
+             </span>
+       </div>     
+       
+            
+   <div id="success-page" style="text-align:center; font-weight:bold; "> </div>
+ 
+
+  <table width="98%" bgcolor="#FFFFFF"   border=" "  cellpadding="2" cellspacing="2"  align="center"  id="tbl" class="mainbody"    >
+<tr > 
+	
+ 
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Status / Name</th> 
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Login Location  </th> 
+ 
+ <th width='120'bgcolor='' align='left' valign='top' style="text-align:center;">Login Time</th> 
+  
+ 
+   
+  
+ <th width='120'bgcolor='' align='left' valign='top' style="text-align:center;">Logout Time</th> 
+<th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Premise  </th>
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Sub City  </th>
+
+  
+ 
+
+ 
+ 
+ </tr> 
+ 
+@foreach($query as $rst)
+                 
+	 
+   
+
+ 
+
+
+ 
+
+ <td align='left' bgcolor=''  valign ='top' class="table-td" >
+ <span  style="margin:8px; display:block;">
+
+
+ 
+ 
+ @if($rst->status  == "1")
+ 
+ <a   href="#popup1"  onclick="getStudentDetails({{ $rst->usr_id }})">
+ <i class='fas fa-user' style='font-size:24px;color:green'></i> &nbsp; {!!$rst->fname!!}  
+  </a>
+ 
+@endif
+@if($rst->status  == "0")
+ 
+<a   href="#popup1"  onclick="getStudentDetails({{ $rst->usr_id }})">
+ <i class='fas fa-user' style='font-size:24px;color:gray'></i> &nbsp; {!!$rst->fname!!}  
+  </a>
+@endif
+ 
+</span> 
+ 
+ </td >
+ <td>
+ 
+{!!$rst->cityName!!} &nbsp;/&nbsp;&nbsp; {!!$rst->tag_location!!} 
+ 
+  </td > 
+  <td align='left' bgcolor=''  valign ='top' class="table-td" >
+ <span  style="margin:8px; display:block;">
+ {!!$rst->login_time!!}  
+</span>
+
+ 
+  </td > 
+  
+  <td align='left' bgcolor=''  valign ='top' class="table-td" >
+ <span  style="margin:8px; display:block;">
+  {!!$rst->logout_time!!}  
+</span>
+
+ 
+  </td > 
+
+   
+  <td align='left' bgcolor=''  valign ='top' class="table-td" >
+ <span  style="margin:8px; display:block;">
+  {!!$rst->premise!!}  
+</span>
+
+ 
+  </td > 
+ 
+  
+   <td align='left' bgcolor=''  valign ='top' class="table-td" >
+ <span  style="margin:8px; display:block;">
+  {!!$rst->subCity!!}  
+</span>
+
+ 
+  </td > 
+  
+  
+  
+ 
+
+  
+    
+ 
+  
+     
+ 
+</tr>
+   
+	
+						
+					  
+					  
+				 
+				@endforeach
+                
+                 <input id="signup-token" name="_token" type="hidden" value="{{csrf_token()}}"> 
+ </table>				 
+	 			 
+       <div style="text-align:center;" id="paginate" class="mainbody"> {{ $query->links() }}  </div>    
+         
+	   <div id="lengths" style="height:30px;"> </div>
+               
+         
+         
+         
+         
+         <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 id="prg"> </h2> 
+         
+		<a class="close" href="#">&times;</a>
+        
+		<!-- <div class="content mainbody" id="contents" > -->
+			<!-- Thank to pop me out of that button, but now i'm done so you can close this window. -->
+<div class="content" id="contents" style="max-height:600px;overflow-y:scroll; " >
+
+    
+    
+    <table width="98%" bgcolor="#FFFFFF"   border=" "  height="150" cellpadding="2" cellspacing="2"  align="center"  id="tbl2"  >
+<tr > 
+	
+ 
+<th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Status / Name</th> 
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Login Location  </th> 
+ 
+ 
+ <th width='120'bgcolor='' align='left' valign='top' style="text-align:center;">Login Time</th> 
+  
+ 
+   
+  
+ <th width='120'bgcolor='' align='left' valign='top' style="text-align:center;">Logout Time</th> 
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Premise  </th>
+ <th width='150'bgcolor='' align='left' valign='top' style="text-align:center;">Sub City  </th>
+
+  
+ 
+
+ 
+ 
+ </tr> 
+ 
+ </table>
+    
+    
+    
+    
+    
+  
+ 
+ <!--
+ <div style="margin-top:25px;">
+ 
+ 	<a class="button" href="#popup1" onClick="showPopupPage('./edit-vote/{{Session::get('selection')}}')" >Login</a>  
+ 	
+ 	<a class="button" href="#popup1" onClick="login()" >Login</a>
+ 	
+ 	
+ 	</div> -->
+ 	
+ 	
+		</div>
+	</div>
+</div>
+ 
+ 
+         
+         
+         
+         
+         
+         
+         
+         
+             
+   </div>
+</div> 
+    
+    
+    
+    
+    
+    
+     
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<script>
+	
+	 
+	 $.ajaxSetup({
+		     headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+  
+		}); 
+		
+		 
+ 
+ 
+ 
+ function getStudentDetails(quesId)	
+	{
+		  
+
+		 
+		 $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'login-details-location',
+         data:{"_token":$('#signup-token').val(),"stdId":quesId},
+		 processData:"false",
+         success: function(data) {
+			 
+			 
+			 
+			 
+	   
+	    
+	   
+	   
+   var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl2 +'<tr ><th  width='300' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Status / Name</th><th  width='300' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Login Location</th><th  width='300' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Login Time</th><th  width='300' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Logout Time</th><th width='300' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Premise</th><th width='300' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Sub City</th>    </tr>";
+   
+   $("#tbl2").html(table);
+   
+	   var option="";  
+	   var i=0;
+	   var dt="";
+	    
+	 // $.each(data['query'],function(key,val)
+	  // for (i=0;i < data.length;i++)
+				//{
+					var pre='';
+					var str ="";
+					
+					var fname="";
+		var logout='';
+	 for (i=0;i < data.length;i++)
+				  {
+				
+					//option +='<span>'+data[i].question +':'+data[i].optionA +'</span>';
+					 fname =data[i].fname;
+					
+					if( data[i].status == "1")
+					 {
+						dt= "<i class='fas fa-user' style='font-size:24px;color:green'></i> &nbsp";
+					 }
+					 else
+					 {
+						dt= "<i class='fas fa-user' style='font-size:24px;color:gray'></i> &nbsp; ";
+					 }	
+			 
+		 
+  
+  
+
+			if(data[i].premise=='null')
+			{
+				pre="";
+				
+			 }
+			 else
+			 {
+				 	pre=data[i].premise;
+			 }	
+			 
+				 logout=data[i].logout_time;
+				
+			  
+				
+			if(logout == null)
+			 {
+				 	logout="";
+			 }			
+					
+option +="<tr><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + dt +"&nbsp;" + data[i].fname +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].cityName +"&nbsp;/&nbsp; " + data[i].tag_location +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].login_time +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + logout +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + pre +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].subCity +"</span></td >  </tr> ";
+						 
+			 
+			 }
+			  
+				  
+				//});	
+				
+				  
+				$("#tbl2").append(option); 
+				
+			var details =fname+ " &nbsp;Current login details";
+				 
+			 
+				
+				
+				
+				
+				
+				//	document.getElementById('paginate').className="hide_question";
+					
+					
+					
+			$("#prg").html("<span style='text-align: center; font-family: Tahoma, Arial, sans-serif;color: #3C8DBC; margin: 80px 0;'> "+ details+"   </span> ");		 
+		// $("#prg").append("<span style='text-align: center; font-family: Tahoma, Arial, sans-serif;color: #3C8DBC; margin: 80px 0;'>  Login Details  </span>)"; 
+							
+					 var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+	        //$("#lengths").html(ctr); 
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	   
+	  
+    }   
+		 
+     });
+  		
+		 
+		 
+		 
+		 
+		 
+		
+		     //$("#lengths").html(ctr); 
+         
+  
+	}
+				
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ function getRefresh()	
+	{
+		  
+		  
+		  
+		 quesId=1;
+		 $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'login-details-refresh',
+         data:{"_token":$('#signup-token').val(),"stdId":quesId},
+		 processData:"false",
+         success: function(data) {
+			 
+			 
+			 
+			 
+	   
+	    
+	   
+	   
+   var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl2 +'<tr ><th  width='300' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Status / Name</th><th  width='300' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Login Location</th><th  width='300' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Login Time</th><th  width='300' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Logout Time</th><th width='300' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Premise</th><th width='300' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Sub City</th>    </tr>";
+   
+   $("#tbl").html(table);
+   
+	   var option="";  
+	   var i=0;
+	   var dt="";
+	    
+	 // $.each(data['query'],function(key,val)
+	  // for (i=0;i < data.length;i++)
+				//{
+					var pre='';
+					var str ="";
+					
+					var fname="";
+		var logout='';
+		 
+	 for (i=0;i < data.length;i++)
+				  {
+				 
+					//option +='<span>'+data[i].question +':'+data[i].optionA +'</span>';
+					 fname =data[i].fname;
+					
+					if( data[i].status == "1")
+					 {
+						dt= "<i class='fas fa-user' style='font-size:24px;color:green'></i> &nbsp";
+					 }
+					 else
+					 {
+						dt= "<i class='fas fa-user' style='font-size:24px;color:gray'></i> &nbsp; ";
+					 }	
+			 
+		 
+  
+  
+
+			if(data[i].premise=='null')
+			{
+				pre="";
+				
+			 }
+			 else
+			 {
+				 	pre=data[i].premise;
+			 }	
+			 
+				 logout=data[i].logout_time;
+				
+			  
+				
+			if(logout == null)
+			 {
+				 	logout="";
+			 }			
+					
+option +="<tr><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + dt +"&nbsp;" + data[i].fname +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].cityName +"&nbsp;/&nbsp; " + data[i].tag_location +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].login_time +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + logout +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + pre +"</span></td ><td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].subCity +"</span></td >  </tr> ";
+					 
+			 
+			 }
+			  
+				  
+				//});	
+				
+				  
+				$("#tbl").append(option); 
+				
+				
+				
+			//var details =fname+ " &nbsp;Current login details";
+				 
+			 
+				
+				
+				
+				
+				
+				//	document.getElementById('paginate').className="hide_question";
+					
+					
+					
+			 	 
+		// $("#prg").append("<span style='text-align: center; font-family: Tahoma, Arial, sans-serif;color: #3C8DBC; margin: 80px 0;'>  Login Details  </span>)"; 
+		
+					
+					 var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+	        //$("#lengths").html(ctr); 
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	   
+	  
+    }   
+		 
+     });
+  		
+		 
+		 
+		 
+		 
+		 
+		
+		     //$("#lengths").html(ctr); 
+         
+  
+	}
+				
+ 
+ 
+ 
+ 
+ 
+ 
+		
+		
+		
+		
+		
+	function getPrgCourse(quesId)	
+	{
+		
+		var dtArray=[];
+		
+		 
+		 var lstcode ='lstcode';
+		    txt='txt';
+		var schs= txt.concat(quesId);
+		
+		var txtCosIds=txtCosId.concat(quesId);
+		
+		
+		 var lstcodes=lstcode.concat(quesId);
+		
+		
+		
+		var schss= document.getElementById(schs).value;
+		
+		 
+		  
+		 var mod = document.getElementById(lstcodes).value;
+		 
+		  
+		 var cosId =document.getElementById(txtCosIds).value;
+		 
+		// alert(cosId);
+		 
+		 var edit=confirm("Are you sure you want to Edit this item ?"+'\n' +schss);
+		//var delMultiple=confirm('Are you sure you want to delete these ?'+'\n' +question);
+		 
+		 
+		  
+	if(edit)	
+	{ 
+		 
+		
+		 dtArray.push({ 
+			   courseMode:mod,
+			   cosId:cosId,
+			   lecId:quesId
+			  
+			});
+			
+			 
+	 	
+ var dataArray= JSON.stringify(dtArray);
+	  //console.log(dataArray); 
+		
+		
+		$.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'/edit-Lecture-Course/quesId',
+         data:{"_token":$('#signup-token').val(),"dataArray":dataArray},
+		 processData:"false",
+         success: function(data) {
+			 		
+		  
+		  
+		 
+ 
+		
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title </th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>   <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+    
+   $("#tb1").html(table);
+   
+     
+    
+	    
+	   var option="";  
+	   var i=0;
+	     for (i=0;i < data.length;i++)
+				  {
+	     
+		 		 
+				
+option +="<tr> <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ data[i].lecId +")'>" + data[i].cosId +"</a></span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].course +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ data[i].courseUnit   +"</span></td >   <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ data[i].lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +data[i].lecId +")' value='" +data[i].lecId +" ' id='" +data[i].lecId +"'  </span><input name='"+ txts.concat(data[i].lecId) +"' id='"+ txts.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].course	 +"'><input name='"+ txtDetails.concat(data[i].lecId) +"' id='"+ txtDetails.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].courseDetails+"'><input name='"+ txtCosId.concat(data[i].lecId) +"' id='"+ txtCosId.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].cosId	 +"'><select name='lst' id='lst' hidden=''  ></select> <input name='"+ txtfName.concat(data[i].lecId)+"' id='"+  txtfName.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].fName+"'><input name='"+ txtSurname.concat(data[i].lecId)+"' id='"+ txtSurname.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].surname +"' /> <input name='"+ txtTitle.concat(data[i].lecId)+"' id='"+ txtTitle.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].title+"' /></td ></tr> ";
+				 
+				 
+				}
+				
+				$("#tb1").append(option); 
+		var saved= '<span class=rstclass style=color:#2965A0;> &nbsp;&nbsp; '+ data +' &nbsp;</span>';
+		
+		$("#success-page").html(saved); 
+		
+		     //$("#lengths").html(ctr); 
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	    
+	  
+    }   
+		 
+     });
+  
+	}}
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	 
+		
+		 
+		
+$(function() {
+ 
+  
+ $("#faculty1").change(function(ev) {
+	  ev.preventDefault();
+	   var dtArray=[];
+	 
+	 
+	var ctr =0;
+	 
+	 document.getElementById('txtSearch').value="";
+	   
+	  if($("#faculty1").val() == "Selcet")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Faculty  !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	
+	 document.getElementById('cls1').selectedIndex = 0;
+	    document.getElementById('term1').selectedIndex = 0;
+	
+	  if(ctr != 0 )
+	  {
+		  exit;
+	  }
+	 
+	    //document.getElementById('cls1').value='Select';
+	   
+	 /* dtArray.push({
+			 clsId:$("#clss").val()
+			  
+			});
+			
+			 */ 
+	 	
+ //var dataArray= JSON.stringify(dtArray);
+	  //console.log(dataArray); 
+	  
+     $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'search-lecture-course-fal',
+         data:{"_token":$('#signup-token').val(),"falId":$("#faculty1").val()},
+		 processData:"false",
+         success: function(data) {
+			 
+			 
+			 
+			
+    var sel="Select Department";
+			 var option='';
+			 option ='<option value="Select">'+sel+'</option>';
+			
+			
+				for (var i=0;i < data.rstDpt.length;i++)
+				{
+				 
+					
+				 option+='<option value ="'+ data.rstDpt[i].dptId +'">'+data.rstDpt[i].department +'</option>';
+				}
+				
+				
+				 
+				 $("#dpt1").html(option);
+	  
+	   
+	   
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title</th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>   <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+   
+   $("#tbl").html(table);
+   
+	   
+	    
+		 
+	  var option="";  
+	   
+	    // for(i=0; i< data.length;i++)
+		
+				 // {
+					  
+				 $.each(data['query'],function(key,val)
+				{
+			 
+			
+			  
+					
+option +="<tr> <td align='left'  valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ val.lecId +")'>" + val.cosId +"</a> </span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.course +"</span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ val.courseUnit   +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ val.lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +val.lecId +")' value='" +val.lecId +" ' id='" +val.lecId +"'  </span><input name='"+ txts.concat(val.lecId) +"' id='"+ txts.concat(val.lecId) +"' type='hidden' value='"+ val.course	 +"'><input name='"+ txtDetails.concat(val.lecId) +"' id='"+ txtDetails.concat(val.lecId) +"' type='hidden' value='"+ val.courseDetails+"'><input name='"+ txtCosId.concat(val.lecId) +"' id='"+ txtCosId.concat(val.lecId) +"' type='hidden' value='"+ val.cosId	 +"'><select name='lst' id='lst' hidden=''  ></select><input name='"+ txtfName.concat(val.lecId)+"' id='"+  txtfName.concat(val.lecId)+"' type='hidden' value='"+ val.fName+"'><input name='"+ txtSurname.concat(val.lecId)+"' id='"+ txtSurname.concat(val.lecId)+"' type='hidden' value='"+ val.surname +"' /> <input name='"+ txtTitle.concat(val.lecId)+"' id='"+ txtTitle.concat(val.lecId)+"' type='hidden' value='"+ val.title+"' /></td ></tr>";
+						 
+			 
+			 
+			  
+				 
+					});	
+				
+				 $("#tbl").append(option); 
+					document.getElementById('paginate').className="hide_question";
+					
+					 var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+	         $("#SelectError").html('');
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	  //errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp; L.G.A selection Error: &nbsp;</span>';
+	  //$("#lgaSelect").append(errors);
+	    
+	  
+    }   
+		 
+     });
+ });
+			
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $("#dpt1").change(function(ev) {
+	  ev.preventDefault();
+	   var dtArray=[];
+	 
+	 
+	var ctr =0;
+	 
+	  
+	  if($("#faculty1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Faculty Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	  
+	  
+	   if($("#dpt1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Department Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	 
+	  document.getElementById('cls1').selectedIndex = 0;
+	    document.getElementById('term1').selectedIndex = 0;
+	
+	  if(ctr != 0 )
+	  {
+		  exit;
+	  }
+	  
+	    
+	 
+	 /* dtArray.push({
+			 clsId:$("#clss").val()
+			  
+			});
+			
+			 */ 
+	 	
+//var dataArray= JSON.stringify(dtArray);
+	  //console.log(dataArray); 
+	 
+	  
+     $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'search-lecture-course-fal-dpt',
+         data:{"_token":$('#signup-token').val(),"falId":$("#faculty1").val(),"dptId":$("#dpt1").val()},
+		 processData:"false",
+         success: function(data) {
+  
+  // console.log('success');
+    //console.log(data[0].question);
+	//console.log(data[0].optionA);
+	  //console.log(data.success);
+	   //$("#tablesuccess").append('&nbsp;Successfuly Executed');
+	  
+	   
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title</th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>   <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+    
+   $("#tbl").html(table);
+   
+   
+   
+   
+   var dt="";
+	   var option="";  
+	   var i=0;
+	   for (i=0;i < data.length;i++)
+				{
+				
+					//option +='<span>'+data[i].question +':'+data[i].optionA +'</span>';
+					
+					 if( data[i].email != null)
+					 {
+						dt= data[i].email;
+					 }
+					 else
+					 {
+						dt= "";
+					 }
+					
+					
+					
+option +="<tr> <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ data[i].lecId +")'>" + data[i].cosId +"</a></span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].course +"</span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ data[i].courseUnit   +"</span></td >   <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ data[i].lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +data[i].lecId +")' value='" +data[i].lecId +" ' id='" +data[i].lecId +"'  </span><input name='"+ txts.concat(data[i].lecId) +"' id='"+ txts.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].course	 +"'><input name='"+ txtDetails.concat(data[i].lecId) +"' id='"+ txtDetails.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].courseDetails+"'><input name='"+ txtCosId.concat(data[i].lecId) +"' id='"+ txtCosId.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].cosId	 +"'><select name='lst' id='lst' hidden=''  ></select> <input name='"+ txtfName.concat(data[i].lecId)+"' id='"+  txtfName.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].fName+"'><input name='"+ txtSurname.concat(data[i].lecId)+"' id='"+ txtSurname.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].surname +"' /> <input name='"+ txtTitle.concat(data[i].lecId)+"' id='"+ txtTitle.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].title+"' /></td ></tr> ";
+				 
+				 
+				}
+				
+				$("#tbl").append(option); 
+				
+				 
+			    var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+					 //$("#totSch").html("<pan>Total No of Student: "+ ctr); 
+					  
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	  //errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp; L.G.A selection Error: &nbsp;</span>';
+	  //$("#lgaSelect").append(errors);
+	    
+	  
+    }   
+		 
+     });
+ });
+			
+ 
+ 
+ 
+ $("#cls1").change(function(ev) {
+	  ev.preventDefault();
+	   var dtArray=[];
+	 
+	 
+	var ctr =0;
+	 
+	  
+	  if($("#faculty1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Faculty Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	  
+	    if($("#dpt1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Department Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	 
+	
+	document.getElementById('term1').selectedIndex = 0;
+	     
+		
+	  if(ctr != 0 )
+	  {
+		  exit;
+	  }
+	  
+	    
+	 
+	 /* dtArray.push({
+			 clsId:$("#clss").val()
+			  
+			});
+			
+			 */ 
+	 	
+//var dataArray= JSON.stringify(dtArray);
+	  //console.log(dataArray); 
+	 
+	  
+     $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'search-lecture-course-level',
+         data:{"_token":$('#signup-token').val(),"falId":$("#faculty1").val(),"dptId":$("#dpt1").val(),"levId":$("#cls1").val()},
+		 processData:"false",
+         success: function(data) {
+  
+  
+  
+	   
+	   
+	    var sel="Select Lecturer";
+			 var option='';
+			 option ='<option value="Select">'+sel+'</option>';
+			
+			
+				 for (i=0;i < data.lect.length;i++)
+				{
+				  
+				  
+					
+				 option+='<option value ="'+data.lect[i].lcrId +'">'+data.lect[i].title +'&nbsp; '+ data.lect[i].fName+' &nbsp;'+ data.lect[i].surname+'</option>';
+				}
+				
+				
+				 
+				 $("#term1").html(option);
+	   
+	   
+	   
+	   
+	  
+	   
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title </th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>  <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+    
+   $("#tbl").html(table);
+   
+   
+   
+   
+   var dt="";
+	   var option="";  
+	   var i=0;
+	  // for (i=0;i < data.length;i++)
+	  
+	  
+	   $.each(data['query'],function(key,val)
+				{
+			 
+				 
+					
+					
+option +="<tr> <td align='left'  valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ val.lecId +")'>" + val.cosId +"</a> </span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.course +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ val.courseUnit   +"</span></td >   <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ val.lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +val.lecId +")' value='" +val.lecId +" ' id='" +val.lecId +"'  </span><input name='"+ txts.concat(val.lecId) +"' id='"+ txts.concat(val.lecId) +"' type='hidden' value='"+ val.course	 +"'><input name='"+ txtDetails.concat(val.lecId) +"' id='"+ txtDetails.concat(val.lecId) +"' type='hidden' value='"+ val.courseDetails+"'><input name='"+ txtCosId.concat(val.lecId) +"' id='"+ txtCosId.concat(val.lecId) +"' type='hidden' value='"+ val.cosId	 +"'><select name='lst' id='lst' hidden=''  ></select><input name='"+ txtfName.concat(val.lecId)+"' id='"+  txtfName.concat(val.lecId)+"' type='hidden' value='"+ val.fName+"'><input name='"+ txtSurname.concat(val.lecId)+"' id='"+ txtSurname.concat(val.lecId)+"' type='hidden' value='"+ val.surname +"' /> <input name='"+ txtTitle.concat(val.lecId)+"' id='"+ txtTitle.concat(val.lecId)+"' type='hidden' value='"+ val.title+"' /></td ></tr>";
+				 
+				 
+				});
+				
+				$("#tbl").append(option); 
+				
+				 
+			    var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+					 //$("#totSch").html("<pan>Total No of Student: "+ ctr); 
+					  
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	  //errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp; L.G.A selection Error: &nbsp;</span>';
+	  //$("#lgaSelect").append(errors);
+	    
+	  
+    }   
+		 
+     });
+ });
+			
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $("#term1").change(function(ev) {
+	  ev.preventDefault();
+	   var dtArray=[];
+	 
+	 
+	var ctr =0;
+	 
+	  var LectureId ="";
+	  if($("#faculty1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Faculty Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	  
+	  
+	  
+	    if($("#dpt1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Department Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	
+	  if($("#cls1").val() == "Select")
+	{
+		
+		//document.getElementById('error-page').style.height="25px";
+	
+		var errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp;  Select Level Value is required !! &nbsp;</span>';
+	  $("#SelectError").html(errors);
+		ctr++;
+	}  
+	 
+	
+	  if(ctr != 0 )
+	  {
+		  exit;
+	  }
+	  
+	    
+	 
+	 /* dtArray.push({
+			 clsId:$("#clss").val()
+			  
+			});
+			
+			 */ 
+	 	
+//var dataArray= JSON.stringify(dtArray);
+	  //console.log(dataArray); 
+	 
+	 
+	  
+	  
+     $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'search-lecture-course-semester',
+         data:{"_token":$('#signup-token').val(),"falId":$("#faculty1").val(),"dptId":$("#dpt1").val(),"levId":$("#cls1").val(),"semId":$("#term1").val()},
+		 processData:"false",
+         success: function(data) {
+  
+  // console.log('success');
+    //console.log(data[0].question);
+	//console.log(data[0].optionA);
+	  //console.log(data.success);
+	   //$("#tablesuccess").append('&nbsp;Successfuly Executed');
+	  
+	   
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title</th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>  <th   width='150' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Change Lecturer</th> <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+    
+   $("#tbl").html(table);
+   
+   
+   var opt1="";
+   
+   var dt="";
+	   var option=""; 
+	   var opt=""; 
+	   var i=0;
+	  // for (i=0;i < data.length;i++)
+				//{
+					var lectIds ='';
+			 $.each(data['query'],function(key,val)
+				{
+			 	
+					 
+					
+					
+					
+option +="<tr> <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ val.lecId +")'>" + val.cosId +"</a></span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.course +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ val.courseUnit   +"</span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'><select  id='"+ lstcode.concat(val.lecId) +"' class='mnu' onChange='getPrgCourse("+val.lecId+")'><option  value='Select'> Seelect Lecturer</option><option  value='" + val.lcrId +"'> " +val.title +" " +val.fName +"  " +val.surname +" </option>  </select> </span></td >  <td align='left'   valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + val.created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ val.lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +val.lecId +")' value='" +val.lecId +" ' id='" +val.lecId +"'  </span><input name='"+ txts.concat(val.lecId) +"' id='"+ txts.concat(val.lecId) +"' type='hidden' value='"+ val.course	 +"'><input name='"+ txtDetails.concat(val.lecId) +"' id='"+ txtDetails.concat(val.lecId) +"' type='hidden' value='"+ val.courseDetails+"'><input name='"+ txtCosId.concat(val.lecId) +"' id='"+ txtCosId.concat(val.lecId) +"' type='hidden' value='"+ val.cosId	 +"'><select name='lst' id='lst' hidden=''  ></select> <input name='"+ txtfName.concat(val.lecId)+"' id='"+  txtfName.concat(val.lecId)+"' type='hidden' value='"+ val.fName+"'><input name='"+ txtSurname.concat(val.lecId)+"' id='"+ txtSurname.concat(val.lecId)+"' type='hidden' value='"+ val.surname +"' /> <input name='"+ txtTitle.concat(val.lecId)+"' id='"+ txtTitle.concat(val.lecId)+"' type='hidden' value='"+ val.title+"' /></td ></tr> ";
+				
+				 
+				//lectIds= '#'+lstcode+val.lcrId
+				lectIds=lstcode.concat(val.lcrId);
+				 
+				 
+				});
+				
+				
+				
+				$("#tbl").append(option); 
+				
+				
+				
+				
+				
+				
+				 
+				 var counters =0;
+				 
+				 
+				  $.each(data['query'],function(key,val)
+				{
+			 	
+				
+				//opt1+='<option value ="'+val.lcrId +'">'+val.title +'&nbsp; '+ val.fName+' &nbsp;'+ val[i].surname+'</option>';
+				  for (i=0;i < data.lect.length;i++)
+				{
+				  
+				  if(counters==0)
+				  {
+					opt1+="<option  value='Select'> Select Lecturer</option>"
+					counters++;
+					}
+					
+				 opt+='<option value ="'+data.lect[i].lcrId +'">'+data.lect[i].title +'&nbsp; '+ data.lect[i].fName+' &nbsp;'+ data.lect[i].surname+'</option>';
+				}
+				
+				  $('#'+lstcode.concat(val.lecId)).html(opt1) ;
+				 
+				
+				 $('#'+lstcode.concat(val.lecId)).append(opt) ;
+				 
+				 
+				   
+				   opt="";
+				   
+				    
+				 });  
+				 
+				  
+				 
+				 
+				 
+				 
+				   
+			    var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }
+					 //$("#totSch").html("<pan>Total No of Student: "+ ctr); 
+					  
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	  //errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp; L.G.A selection Error: &nbsp;</span>';
+	  //$("#lgaSelect").append(errors);
+	    
+	  
+    }   
+		 
+     });
+ });
+			
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+		
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ //SEARCH QUESTION SESSION START HERE
+ 
+  
+ $("#txtSearch").keyup(function(ev) {
+	  ev.preventDefault();
+	   var dtArray=[];
+	
+	  
+	var ctr =0;
+	
+    //document.getElementById('LAG').value='Select';
+   //document.getElementById('school').value='Select';
+      document.getElementById('faculty1').selectedIndex = 0;
+	    document.getElementById('dpt1').selectedIndex = 0;
+	   document.getElementById('cls1').selectedIndex = 0;
+	    document.getElementById('term1').selectedIndex = 0;
+	  
+     $.ajax({ 
+	  dataType:"json", 
+	    type:"POST",
+         url:'search-lecture-course-text',
+         data:{"_token":$('#signup-token').val(),"search":$("#txtSearch").val()},
+		 processData:"false",
+         success: function(data) {
+  
+   //console.log('success');
+   // console.log(data[0].question);
+	//console.log(data[0].optionA);
+	  //console.log(data.success);
+	   //$("#tablesuccess").append('&nbsp;Successfuly Executed');
+	    
+	   
+var table="<table width='98%' bgcolor='#FFFFFF ' cellpadding='2' cellspacing='2'  align='center' id='+ tbl +'<tr ><th  width='150' bgcolor='#ffffff' align='left' valign='top' style='text-align:center;'>Course Code</th><th  width='150' bgcolor='#ffffff ' align='left' valign='top' style='text-align:center;'>Course Title</th><th width='120' bgcolor='#ffffff' align='left' valign='top' style='  text-align:center;'>Course Unit</th>  <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Lecturer</th>  <th   width='120' bgcolor='#ffffff ' align='left' valign='top' style='  text-align:center;'>Registered Date</th> <th width='60'bgcolor='#ffffff ' align='left' valign='top'   scope='col'style='text-align:center;  '> </th> <th  width='50'bgcolor=' #ffffff ' align='left'  valign='  top  ' style='  text-align:center;  '><strong> </strong> </th></tr>";
+    
+   $("#tbl").html(table);
+   
+   
+   
+	   var option="";  
+	   var i=0;
+	     for (i=0;i < data.length;i++)
+				  {
+				
+					//option +='<span>'+data[i].question +':'+data[i].optionA +'</span>';
+					
+					if( data[i].email != null)
+					 {
+						dt= data[i].email;
+					 }
+					 else
+					 {
+						dt= "";
+					 }
+					
+			 	
+					
+option +="<tr> <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'> <a   href='#popup1' onclick='getCourseDetails("+ data[i].lecId +")'>" + data[i].cosId +"</a></span></td > <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].course +"</span></td > <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>   "+ data[i].courseUnit   +"</span></td >  <td align='left'     valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].title +" " + data[i].fName +" " + data[i].surname +"</span></td >   <td align='left'    valign='top' class='table-td'><span  style='margin:8px; display:block;'>" + data[i].created_at +"</span></td > <td align='left' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <a href ='#'  class= 'del'  onClick='destroy("+ data[i].lecId +" )'>Delete</a>  </span></td ><td align='center' bgcolor= #980905   valign='top'class='table-td'><span  style='margin:8px; display:block;'> <input name='' type='checkbox'  onClick='get_Values(" +data[i].lecId +")' value='" +data[i].lecId +" ' id='" +data[i].lecId +"'  </span><input name='"+ txts.concat(data[i].lecId) +"' id='"+ txts.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].course	 +"'><input name='"+ txtDetails.concat(data[i].lecId) +"' id='"+ txtDetails.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].courseDetails+"'><input name='"+ txtCosId.concat(data[i].lecId) +"' id='"+ txtCosId.concat(data[i].lecId) +"' type='hidden' value='"+ data[i].cosId	 +"'><select name='lst' id='lst' hidden=''  ></select> <input name='"+ txtfName.concat(data[i].lecId)+"' id='"+  txtfName.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].fName+"'><input name='"+ txtSurname.concat(data[i].lecId)+"' id='"+ txtSurname.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].surname +"' /> <input name='"+ txtTitle.concat(data[i].lecId)+"' id='"+ txtTitle.concat(data[i].lecId)+"' type='hidden' value='"+ data[i].title+"' /></td ></tr> ";
+							 //console.log('Searching Data'); 
+		 
+				  }
+				
+				 $("#tbl").append(option); 
+				document.getElementById('paginate').className="hide_question";
+				 
+				
+				/*var ctr=data.length;
+					 if(ctr==0)
+					 {
+					    alert('Data not Found');
+		              }*/
+         },
+		 error: function(data) {
+         
+	   console.log('Data Error'); 
+	 
+	  //errors= '<span class=rstclass style=color:#C63A26;> &nbsp;&nbsp; L.G.A selection Error: &nbsp;</span>';
+	  //$("#lgaSelect").append(errors);
+	    
+	  
+    }   
+		 
+     });
+ });
+ 
+ 
+ 
+ 
+ 
+});
+
+
+ 
+
+     </script>
+
+ @section('css')
+ 
+  
+ 
+ <link href="../exam/css/button.css" rel="stylesheet" type="text/css" />
+     <link href="../exam/css/style.css" rel="stylesheet" type="text/css" />
+     <link href="../exam/css/style3.css" rel="stylesheet" type="text/css" />
+    <link href="../exam/css/popup.css" rel="stylesheet" type="text/css" />
+    
+    
+@stop
+
+@section('js')
+ 
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ 
+@stop
+
+ @stop
+
+
+
+
+ 

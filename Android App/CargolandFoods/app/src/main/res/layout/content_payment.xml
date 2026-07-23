@@ -1,0 +1,660 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+<LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp">
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="0dp"
+
+                        android:layout_marginLeft="-19dp"
+                        android:backgroundTint="@color/transparent"
+
+
+
+                        android:drawableRight="@drawable/logo9"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="172dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-12dp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:text="Send Itemes"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-35dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:importantForAutofill="no"
+                        android:text="Make Payment !!"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+                <!-- Text line starts here -->
+                <!--
+                <LinearLayout
+                    android:id="@+id/linearLayout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/lev1"
+                        android:layout_width="match_parent"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:text="Price" />
+
+                    <TextView
+                        android:id="@+id/lev2"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:maxLines="2"
+                        android:lines="2"
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Pickup Address" />
+
+
+                    <TextView
+                        android:id="@+id/lev3"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Receiver" />
+
+                    <TextView
+                        android:id="@+id/lev03"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Sender" />
+
+
+
+                    <TextView
+                        android:id="@+id/lev5"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Review" />
+
+
+                    <TextView
+                        android:id="@+id/lev4"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Payment" />
+
+
+                </LinearLayout> -->
+
+                <!--
+                                <LinearLayout
+                                    android:id="@+id/linearLayout4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/note"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:ems="10"
+                                        android:importantForAutofill="no"
+                                        android:text="Make Payment !!"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold|italic" />
+
+                                </LinearLayout>
+                -->
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:importantForAutofill="no"
+                        android:text=" * denote mandatory"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/lblAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:text="Amount Charge: 0.00"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+                    <!--
+                    <TextView
+                        android:id="@+id/card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold|italic"
+                        android:textSize="17sp"
+                        android:text="Card Type: Pay with Master, Visa and Verve Card"
+                        android:layout_marginBottom="5dp"/>
+
+-->
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/master"
+                        android:layout_width="363dp"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text="We Accept these cards Master, Visa and Verve" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="2.65"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:contentDescription="Status"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/radioNegative"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorGreen"
+
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+
+                            android:layout_alignParentStart="true"
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/transparents"
+                            android:src="@drawable/master1" />
+
+                        <RadioButton
+                            android:id="@+id/radioPositive"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorGreen"
+                            android:text="" />
+
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="0dp"
+
+                            android:background="@color/transparents"
+                            android:src="@drawable/visa" />
+
+                        <RadioButton
+                            android:id="@+id/radioPending"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorGreen"
+                            android:text="" />
+
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+
+                            android:layout_alignParentStart="true"
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/transparents"
+                            android:src="@drawable/verve" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:ems="10"
+                        android:visibility="gone"
+
+                        android:importantForAutofill="no"
+                        android:text="Card Number:*" />
+
+                    <!--
+                    <EditText
+
+                        android:id="@+id/txtCard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+
+                        android:textColor="?android:attr/textColorPrimary"
+
+
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="2.65"
+                        android:background="@xml/text_style"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="Card Number"
+
+                        android:inputType="phone"
+
+                        android:padding="15dp"
+                        android:text=""
+
+                        android:textColorHint="#C1C1C1" />
+
+                    -->
+                    <!-- Material design -->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/lblCard"
+
+                        app:boxBackgroundColor="@color/transparents"
+                        android:background="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/colorControlNormal"
+
+                        android:textColor="?android:attr/textColorPrimary"
+
+
+
+                        style="@style/Widget.Design.TextInputLayout"
+
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+                        app:endIconMode="custom"
+
+
+                        android:hint="Card Number*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtCard"
+
+
+
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="2.65"
+
+                            android:ems="10"
+                            android:gravity="top"
+
+
+                            android:inputType="phone"
+
+                            android:padding="15dp"
+                            android:text=""
+
+                            android:textColorHint="#C1C1C1"
+
+
+
+
+
+
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"  />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/expirey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:importantForAutofill="no"
+                        android:text="Expire Date:" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:importantForAutofill="no"
+                        android:text="MM:*" />
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:importantForAutofill="no"
+                        android:text="YY:*" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20px"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/selectYear" />
+
+                    <Spinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20px"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/selectMonth" />
+
+
+                    <EditText
+
+                        android:id="@+id/txtCVV"
+                        android:layout_width="120dp"
+
+                        android:textColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/colorControlNormal"
+
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="2.65"
+
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="CVV"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+
+                        android:minHeight="15dp"
+                        android:padding="10dp"
+
+
+                        android:text=""
+
+                        android:textColorHint="#C1C1C1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/butReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_botton"
+
+
+
+                        android:text="Pay Now "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+/* Hide the LEDs */
+.white .digit .element {
+	display: none;
+}
+/* Use :before to create a new block in which
+   to display the numbers */
+.white .digit:before {
+	display: block;
+	height: 100%;
+	margin: -20px 0 0 -20px;
+	font-family: "Bank Gothic", "Futura", "Arial";
+	font-size: 250px;
+	opacity: .9;
+	text-align: left;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 30px rgb(0, 200, 255);
+}
+/* Seconds are smaller */
+.white .digit.second:before {
+	font-size: 110px;
+}
+/* Use :before content to inject the digits
+   Also, hide the initial zero in 12hr mode,
+   and adjust the widget of the "1" digits
+   to make the display look nicer */
+.white .d0:before {content: "0";}
+.white .hr12 .d0:first-child:before {display: none;}
+.white .d1:before {content: "1";}
+.white .d1 { width: 100px; }
+.white .second.d1 { width: 40px; }
+.white .d2:before {content: "2";}
+.white .d3:before {content: "3";}
+/* And so on ... */

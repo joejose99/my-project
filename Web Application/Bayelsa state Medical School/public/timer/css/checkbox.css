@@ -1,0 +1,324 @@
+@charset "utf-8";
+/* CSS Document */
+/* The container */
+
+
+
+
+.container {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 25px;
+  width: 25px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+   
+  height: 25px;
+  width: 25px;
+  background-color:#FF9500;
+  border-radius: 50%;
+}
+
+.checkmark3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 25px;
+  width: 25px;
+  background-color: #388E3C;
+  border-radius: 50%;
+}
+.checkmark4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+   
+  height: 25px;
+  width: 25px;
+  background-color: #1976D2;
+  border-radius: 50%;
+}
+
+.checkmark5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 25px;
+  width: 25px;
+  background-color: #3C8DBC;
+  
+   
+}
+
+.checkmark6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 25px;
+  width: 25px;
+  background-color: #3C8DBC;
+  
+   
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container:hover input ~ .checkmark2 {
+  background-color: #FFAE40;
+}
+
+.container:hover input ~ .checkmark3 {
+  background-color: #47B64D;
+}
+
+.container:hover input ~ .checkmark4 {
+  background-color: #4D9BEA;
+}
+/* When the radio button is checked, add a blue background */
+
+
+.container input:checked ~ .checkmark5 {
+  background-color:#3C8DBC;
+}
+
+.container input:checked ~ .checkmark6 {
+  background-color:#3C8DBC;
+}
+
+
+ 
+ 
+ 
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark4:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmark5:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmark6:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: inline;
+}
+
+.container input:checked ~ .checkmark2:after {
+  display: inline;
+}
+.container input:checked ~ .checkmark3:after {
+  display: inline;
+}
+.container input:checked ~ .checkmark4:after {
+  display: inline;
+}
+
+.container input:checked ~ .checkmark5:after {
+  display: inline;
+}
+
+.container input:checked ~ .checkmark6:after {
+  display: inline;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+	/* 
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	
+	 
+	*/
+	
+	 left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+   
+}
+
+
+.container .checkmark2:after {
+	/* 
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white; 
+	
+	*/
+	
+	 left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container .checkmark3:after {
+	 
+ 	/* 
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white; 
+	
+	*/
+	
+	 left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container .checkmark4:after {
+	 
+ 	/* 
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white; 
+	
+	*/
+	
+	 left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.container .checkmark5:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.container .checkmark6:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+checkBox {
+	margin-left:10px;
+	width:50px;
+	  margin-top:-5px;
+	
+	}
+	
+	.right-radioButton {
+  color:#fff;
+  font-size:13px;
+  text-align:left;
+  margin-left:25px;
+  width:110px;
+  
+  
+  height:30px;
+  
+}

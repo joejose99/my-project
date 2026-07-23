@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_person_24"
+
+                        app:tint="@color/colorHeading" />
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+
+
+                            <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorNormal"
+
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="@string/label_name"/>
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:id="@+id/txt_company_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/tagline_text_size"
+                            android:textColor="@color/tagline"
+
+                            android:layout_marginTop="-18dp"
+                            android:text="User Profile"/>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_navigate_next_24"
+                        app:tint="@color/colorHeading"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#AAAAAA">
+
+                </TextView>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/txt_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:tint="@color/colorHeading"/>
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorNormal"
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="@string/label_phone"/>
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:id="@+id/txt_company_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/tagline_text_size"
+                            android:textColor="@color/tagline"
+                            android:layout_marginTop="-18dp"
+                            android:text="Collation Admin">
+
+                        </com.eciels.android.INEC.TextviewUtil.NormalTextview>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_navigate_next_24"
+                        app:tint="@color/colorHeading"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/tagline">
+
+                </TextView>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_person_remove_24"
+                        app:tint="@color/colorHeading"/>
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorNormal"
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="@string/label_email"/>
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:id="@+id/txt_logout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/tagline_text_size"
+                            android:textColor="@color/tagline"
+                            android:layout_marginTop="-18dp"
+                            android:text="Log out"/>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_navigate_next_24"
+                        app:tint="@color/colorHeading"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/tagline">
+
+                </TextView>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_exit_to_app_24"
+                        app:tint="@color/colorHeading"/>
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorNormal"
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="@string/label_address"/>
+
+
+                        <com.eciels.android.INEC.TextviewUtil.NormalTextview
+                            android:id="@+id/txt_exit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/tagline_text_size"
+                            android:textColor="@color/tagline"
+                            android:layout_marginTop="-18dp"
+                            android:text="Exit"/>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_baseline_navigate_next_24"
+                        app:tint="@color/colorHeading"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/tagline">
+
+                </TextView>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

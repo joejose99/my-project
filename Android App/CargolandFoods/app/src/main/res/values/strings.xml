@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_name">name</string>
+
+
+    <string name="radio_adult">Adult</string>
+    <string name="radio_children">Children</string>
+
+
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">New Item</string>
+    <string name="title_notifications">Sent Item</string>
+
+    <string name="help_users">Help</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="title_activity_user_profile">UserProfile</string>
+
+    <string name="select4">Select State</string>
+
+    <string name="fcm_message">LFC Message</string>
+    <string name="quickstart_message">Click the SUBSCRIBE TO WEATHER button below to subscribe to the
+        weather topic. Messages sent to the weather topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="subscribe_to_weather">Subscribe To Weather</string>
+    <string name="log_token">Log Token</string>
+
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--
+            This is the name that users will see when interacting with this channel.
+            It should describe the category of notifications that will be sent through this channel
+         -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="search">search</string>
+
+    <string name="search_loc">search location</string>
+
+    <string name="radio_no">No</string>
+    <string name="radio_yes">Yes</string>
+
+    <string name="selectYear">Select Year</string>
+    <string name="selectMonth">Select Month</string>
+
+    <string name="title_msg"></string>
+    <string name="radio_negative">Male</string>
+    <string name="radio_positive">Female</string>
+    <string name="select3">Select Title</string>
+    <string name="title_activity_email">email</string>
+    <string name="title_activity_password">password</string>
+    <string name="title_activity_address">address</string>
+    <string name="title_activity_register_review">register_review</string>
+    <string name="title_activity_thank_you">ThankYou</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="label_phone"></string>
+    <string name="label_name"></string>
+    <string name="label_email"></string>
+    <string name="label_address"></string>
+
+
+    <string name="title_activity_main">Main Activity</string>
+    <string name="title_activity_add_new_item">New User</string>
+    <string name="title_activity_view_item">View Item</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_new_item_review">NewItem Review</string>
+    <string name="title_activity_my_photo">MyPhoto Activity</string>
+    <string name="title_activity_others">Others</string>
+    <string name="title_activity_live_video">LiveVideo</string>
+    <string name="title_activity_video_ondemand">Video Ondemand</string>
+    <string name="title_activity_child_dedication">Child Dedication</string>
+    <string name="title_activity_donation">Donation</string>
+    <string name="title_activity_thanks_giving">Thanks Giving</string>
+    <string name="title_activity_events">Events</string>
+    <string name="title_activity_weekly">Weekly Activity</string>
+    <string name="title_activity_notice_board">Notice Board</string>
+    <string name="title_activity_attendance">AttendanceActivity</string>
+
+
+    <string-array name="state_array">
+        <item>Select</item>
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Enugu</item>
+        <item>Imo</item>
+        <item>Gombe</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nassarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+        <item>FCT</item>
+    </string-array>
+
+    <string name="select6">Select LGA</string>
+    <string name="title_activity_user_login">UserLogin</string>
+    <string name="title_activity_forgotten_email">ForgottenEmail</string>
+    <string name="title_activity_show_detail">Show_Detail</string>
+    <string name="title_activity_video_splash">video_splash</string>
+    <string name="title_activity_restuarant">RestuarantActivity</string>
+    <string name="title_activity_delivery_address">DeliveryAddressActivity</string>
+    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="title_activity_payment_thank">PaymentThankActivity</string>
+
+</resources>

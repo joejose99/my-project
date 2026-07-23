@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentThankActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!--  app:navigationIcon="@drawable/logo5"
+         android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+
+            android:paddingLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+
+
+            android:layout_height="?attr/actionBarSize"
+
+
+            android:background="@color/colorMenu"
+            app:navigationIcon="@mipmap/ic_logo5"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@android:style/ThemeOverlay.Material.Light"
+
+            app:titleTextColor="@color/colorMenutext"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_payment_thank" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

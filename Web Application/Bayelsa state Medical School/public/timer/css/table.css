@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+
+.div-table
+{
+ display:table;
+ /*
+background-color:#eee;
+border:1px solid #666666;
+
+*/
+border-spacing:5px;
+width:100%;
+}
+
+.div-table-row
+{
+display:table-row;
+width:auto;
+clear:both;
+
+}
+
+
+.div-table-col
+{
+float:left;
+display:table-column;
+width:47%;
+margin:5px;
+/*
+background-color:#ccc;
+*/
+text-align:left;
+
+}
+
+
+@media screen and (max-width: 450px) {
+	
+	
+	.div-table-col
+{
+float:left;
+display:table-column;
+width:46%;
+margin:2px;
+/*
+background-color:#ccc;
+*/
+text-align:left;
+
+}
+	
+	#tbl
+	{
+		width:90%;
+	}
+}

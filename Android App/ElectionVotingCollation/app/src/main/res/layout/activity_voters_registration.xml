@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true">
+
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="504dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/logo6b" />
+        -->
+     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp" >
+
+        <Button
+            android:id="@+id/btnBack"
+
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/transparents"
+            app:backgroundTint="@null"
+            android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+            android:textColor="#D91F2B"
+            android:textSize="54sp" />
+
+
+        <TextView
+            android:id="@+id/txtReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="-34dp"
+
+            android:textColor="?android:attr/textColorPrimary"
+            android:ems="10"
+            android:text="Voters Registration"
+
+            android:textSize="17sp"
+            android:textStyle="bold|italic" />
+
+     </LinearLayout>
+
+    <!--
+   <EditText
+        android:id="@+id/txtVoteReg"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_weight="2.65"
+        android:ems="10"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Total Registered Voters"
+        android:inputType="number"
+         android:lines="5"
+         android:gravity="top"
+        android:text="@string/txtTRegister" />
+
+        -->
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/transparents"
+
+
+        app:hintTextColor="@color/boxStrokeColor"
+        app:boxStrokeColor="@color/boxStrokeColor"
+        android:id="@+id/textField1"
+        style="@style/Widget.Design.TextInputLayout"
+
+
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        app:backgroundTint="@null"
+
+        app:endIconMode="custom"
+        android:textColor="?android:attr/textColorPrimary"
+
+        android:hint="Total Registered Voters">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVoteReg"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:focusable="true"
+            android:importantForAutofill="no"
+
+
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+   <EditText
+        android:id="@+id/txtVoteAccredited"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.65"
+        android:ems="10"
+        android:hint="Total Accredited Voters"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:inputType="number"
+         android:lines="5"
+         android:gravity="top"
+        android:text="@string/txtTAccredited" />
+   -->
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/transparents"
+
+
+        app:hintTextColor="@color/boxStrokeColor"
+        app:boxStrokeColor="@color/boxStrokeColor"
+        android:id="@+id/textField2"
+        style="@style/Widget.Design.TextInputLayout"
+
+
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        app:backgroundTint="@null"
+
+        app:endIconMode="custom"
+        android:textColor="?android:attr/textColorPrimary"
+
+        android:hint="Total Accredited Voters">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVoteAccredited"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:focusable="true"
+            android:importantForAutofill="no"
+
+
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--
+    <EditText
+        android:id="@+id/txtVoteCast"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.65"
+        android:ems="10"
+        android:hint="Total Votes Cast"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:inputType="number"
+         android:lines="5"
+         android:gravity="top"
+        android:text="@string/txtTCast" />
+   -->
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/transparents"
+
+
+        app:hintTextColor="@color/boxStrokeColor"
+        app:boxStrokeColor="@color/boxStrokeColor"
+        android:id="@+id/textField3"
+        style="@style/Widget.Design.TextInputLayout"
+
+
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        app:backgroundTint="@null"
+
+        app:endIconMode="custom"
+        android:textColor="?android:attr/textColorPrimary"
+
+        android:hint="Total Votes Cast">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVoteCast"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:focusable="true"
+            android:importantForAutofill="no"
+
+
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+    <EditText
+        android:id="@+id/txtVoteRejected"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.65"
+        android:ems="10"
+        android:hint="Total Rejected Votes"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:inputType="number"
+         android:lines="5"
+         android:gravity="top"
+        android:text="@string/txtTRejected" />
+-->
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/transparents"
+
+
+        app:hintTextColor="@color/boxStrokeColor"
+        app:boxStrokeColor="@color/boxStrokeColor"
+        android:id="@+id/textField4"
+        style="@style/Widget.Design.TextInputLayout"
+
+
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        app:backgroundTint="@null"
+
+        app:endIconMode="custom"
+        android:textColor="?android:attr/textColorPrimary"
+
+        android:hint="Total Rejected Votes">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVoteRejected"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:focusable="false"
+            android:importantForAutofill="no"
+
+
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:text="Total Valid Vote"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+
+
+    <EditText
+        android:id="@+id/txtTvalidVote"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.65"
+        android:ems="10"
+        android:gravity="top"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Total Valid Votes"
+        android:inputType="text"
+        android:focusable="false"
+        android:text="@string/txtTValid" />
+
+   <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    
+     
+
+     <Button
+         android:id="@+id/butCancel"
+         android:layout_width="120dp" 
+         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:text="Cancel"  />
+       <!--
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+          
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/button_label" />
+-->
+       <Button
+           android:id="@+id/button"
+           style="@style/Widget.AppCompat.Button.Borderless"
+           android:layout_width="match_parent"
+
+           android:layout_height="50dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="30dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginBottom="15dp"
+           app:backgroundTint="@null"
+           android:background="@drawable/background_botton"
+           android:text="@string/button_label"
+           android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+           android:textColor="#FFFFFF" />
+    
+    </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

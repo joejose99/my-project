@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.shiptodoor.shiptodoor.MenuActivity">
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="101"
+        android:title="User Profile"
+
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="never"/>
+    <!-- app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider" -->
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="102"
+        android:title="share"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
+        android:icon="@drawable/ic_baseline_share_24"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_live_chat"
+        android:orderInCategory="103"
+        android:icon="@drawable/ic_baseline_email_24"
+        android:title="Send Email"
+
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="104"
+        android:title="Log out"
+        android:icon="@drawable/ic_baseline_person_remove_alt_1_24"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="104"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Exit"
+        app:showAsAction="never"/>
+
+
+</menu>

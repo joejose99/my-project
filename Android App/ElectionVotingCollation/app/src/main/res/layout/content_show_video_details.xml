@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FE6E17"
+                android:text="Ward"
+                android:textAlignment="center"
+
+                android:textSize="24sp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textAlignment="center"/>
+
+            <VideoView
+
+        android:id="@+id/vdoView"
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+android:layout_gravity="center"
+        android:layout_weight="0.64" />
+
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_btn"
+        app:backgroundTint="@null"
+        android:layout_gravity="center"
+        android:text="Record Video"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/ic_baseline_videocam_24"
+        android:id="@+id/buttonChoose" />
+
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Play Video"
+        app:backgroundTint="@null"
+        android:layout_gravity="center"
+        android:background="@drawable/background_btn"
+        android:id="@+id/btnPlay"
+        app:endIconDrawable="@drawable/ic_baseline_play_circle_filled_24"  />
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout></ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp" >
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="#ffffff"
+
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_left_24"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <Button
+                        android:id="@+id/but_resfresh"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-33dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+
+                        android:background="@xml/button_review_white"
+                        android:text="Refresh"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#D91F2B" />
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="172dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-12dp"
+                        android:background="#FFFFFF"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:text="Send Itemes"
+                        android:visibility="gone"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+
+
+
+
+                </LinearLayout>
+                <!-- Text line starts here -->
+                <LinearLayout
+                    android:id="@+id/linearLayout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+
+                        android:id="@+id/lev01"
+                        android:layout_width="match_parent"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:importantForAutofill="no"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+                        android:text="Weight" />
+
+                    <TextView
+                        android:id="@+id/lev1"
+                        android:layout_width="match_parent"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="bottom|center"
+                        android:text="Pickup Address" />
+
+                    <TextView
+                        android:id="@+id/lev2"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Price" />
+
+                    <TextView
+                        android:id="@+id/lev3"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+
+                        android:background="@drawable/line_indicator_ash"
+                        android:text="Receiver" />
+
+<!--
+
+                    <TextView
+                        android:id="@+id/lev4"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_ash"
+                        android:text="Review" />
+
+-->
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold|italic"
+                        android:textSize="15sp"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+
+
+                        android:text="Click on Price Option" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="25dp"
+
+                        android:importantForAutofill="no"
+
+                        android:textSize="15sp"
+                        android:ems="10"
+
+                        android:text=" * denote mandatory" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:orientation="vertical">
+
+
+
+                    <Button
+                        android:id="@+id/but_drop"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:focusableInTouchMode="true"
+
+
+
+
+                        android:background="@drawable/botton_bg"
+                        android:text="Full Tracking plus drop on delivery \n Price: 3,000 \n (Price includes VAT at standard rate)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+
+                    <Button
+                        android:id="@+id/but_signatory"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:focusableInTouchMode="true"
+
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+
+
+                        android:background="@drawable/botton_bg"
+                        android:text="Full Tracking plus signature on delivery \n Price: 4,300 \n (Price includes VAT at standard rate) "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_margin="10dp"
+                        android:ems="10"
+
+
+                        android:text="Selected Price:*" />
+                    <me.abhinay.input.CurrencyEditText
+
+                        android:id="@+id/etInput"
+                        android:layout_width="fill_parent"
+
+
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="2.65"
+                        android:background="@xml/text_style"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="0.00"
+
+                        android:inputType="textPersonName"
+                        android:minHeight="15dp"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:focusable="false"
+                        android:enabled="false"
+
+
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textColorHint="#C1C1C1" />
+
+
+
+                    <me.abhinay.input.CurrencyEditText
+
+                        android:id="@+id/etInput_amt"
+                        android:layout_width="fill_parent"
+
+
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="2.65"
+                        android:background="@xml/text_style"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="0.00"
+                        android:visibility="gone"
+
+                        android:inputType="textPersonName"
+                        android:minHeight="15dp"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:focusable="false"
+                        android:enabled="false"
+
+
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textColorHint="#C1C1C1" />
+
+
+
+
+                    <Button
+                        android:id="@+id/butReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+
+                        android:background="@drawable/background_botton"
+                        android:text="Next "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

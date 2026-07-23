@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:context=".UserLogin"
+
+    android:background="@drawable/bg_login_img">
+
+    <!--
+    android:background="@drawable/login_background"
+
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:clickable="true"
+                    android:focusableInTouchMode="true">
+        -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+
+
+            android:orientation="vertical">
+
+
+
+
+
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff"
+
+                android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+                android:textColor="#D91F2B"
+                android:textSize="54sp"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/logo2bc" />
+
+            <!-- android:src="@drawable/logo_user2" -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+
+                android:focusableInTouchMode="true">
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+
+
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout18"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_margin="30dp"
+
+                        android:background="@drawable/txtbg1"
+                        android:layout_height="wrap_content">
+
+                        <!--
+                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                     -->
+
+
+                        <!-- Office details starts here
+
+
+                         -->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/transparents"
+
+
+                            app:hintTextColor="@color/boxStrokeColor"
+                            app:boxStrokeColor="@color/boxStrokeColor"
+                            android:id="@+id/textField1"
+                            style="@style/Widget.Design.TextInputLayout"
+
+
+                            android:focusableInTouchMode="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="2dp"
+                            app:backgroundTint="@null"
+                            app:endIconDrawable="@drawable/ic_baseline_phone_enabled_24"
+                            app:endIconMode="custom"
+                            android:textColor="?android:attr/textColorPrimary"
+
+                            android:hint="Mobile No">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtName"
+                               android:textColor="?android:attr/textColorPrimary"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:focusable="true"
+                                android:importantForAutofill="no"
+
+
+                                android:inputType="phone" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                        <!--
+                                    <EditText
+                                        android:id="@+id/txtPassword"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="40dp"
+                                        android:layout_below="@+id/txtName"
+                                        android:layout_alignRight="@+id/txtName"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="25dp"
+                                        android:background="@xml/text_style"
+                                        android:ems="10"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:minHeight="45dp"
+
+
+                                        android:padding="15dp"
+                                        android:textColor="#000000"
+                                        android:textColorHint="#C1C1C1"
+
+                                        android:visibility="visible" />
+
+                                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    -->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/transparents"
+
+                            app:hintTextColor="@color/boxStrokeColor"
+                            app:boxStrokeColor="@color/boxStrokeColor"
+                            android:id="@+id/textField2"
+
+
+
+                            style="@style/Widget.Design.TextInputLayout"
+
+                            android:focusableInTouchMode="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="2dp"
+                            app:backgroundTint="@null"
+
+                            app:endIconMode="password_toggle"
+
+                            android:hint="Password">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:id="@+id/txtPassword"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+
+                                android:layout_marginBottom="60dp"
+
+                                android:importantForAutofill="no"
+                                android:textColorHint="#C1C1C1"
+
+                                android:inputType="textPassword" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="85dp"
+                        android:layout_marginTop="-60dp"
+                        android:layout_marginRight="85dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_login_button"
+                        android:text="Log in "
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout42"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:textColor="#59466B"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content"
+                            android:text="new user" />
+
+
+                        <Button
+                            android:id="@+id/butReg"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="100dp"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="40dp"
+                            app:backgroundTint="@null"
+                            android:text="Sign Up"
+                            android:textColor="@color/colorReadingBarDay"
+                            android:background="@drawable/botton_bg"/>
+
+                        <Button
+                            android:id="@+id/butFog"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="95dp"
+                            app:backgroundTint="@null"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/transparents"
+                            android:text="Forgot"
+                            android:textColor="@color/colorReadingBarDay" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!--
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:clickable="true"
+                    android:focusableInTouchMode="true">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        -->
+
+
+
+
+
+            <!--
+             </LinearLayout>
+         </ScrollView>
+         </LinearLayout>
+         -->
+
+
+        </LinearLayout>
+        <!--
+                </ScrollView>
+                -->
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

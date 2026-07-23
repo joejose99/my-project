@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"  >
+
+        <shape>
+
+
+            <solid android:width="1dp" android:color="@color/transparents" />
+
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+            <corners android:bottomRightRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topLeftRadius="8dp"
+                android:topRightRadius="8dp"
+                />
+
+        </shape> </item>
+
+
+    <item android:state_pressed="false" android:state_focused="true"  >
+
+        <shape>
+
+
+            <solid android:width="1dp" android:color="@color/transparents" />
+
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+            <corners android:bottomRightRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topLeftRadius="8dp"
+                android:topRightRadius="8dp"
+                />
+
+        </shape> </item>
+
+
+
+    <item  android:state_pressed="false">
+        <shape>
+
+
+            <solid android:width="1dp" android:color="@color/transparents" />
+
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+            <corners android:bottomRightRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topLeftRadius="8dp"
+                android:topRightRadius="8dp"
+                />
+
+        </shape> </item>
+
+    <!-- on click -->
+
+
+    <!--
+        <item
+            android:state_focused="true"
+            android:state_pressed="true"
+            android:color="#D91F2B"/>
+
+        <item
+            android:state_focused="false"
+            android:state_pressed="true"
+            android:color="#000066"/>
+            -->
+
+</selector>

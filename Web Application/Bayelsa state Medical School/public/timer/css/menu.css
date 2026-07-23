@@ -1,0 +1,480 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+.topMenu {
+	height: 50px;
+  
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+   width: 100%; 
+  background-color: #3C8DBC;
+  overflow: hidden;
+ padding:0;
+ z-index:100;
+
+}
+
+.topMenuLogo {
+	position:relative;
+	width: 160px;
+	background-color: #367FA9;
+	height: 50px;
+	float:left;
+	border:3px ;
+	border-color:#367FA9;
+	text-align:center;
+	color:#FFF;
+	font: "Comic Sans MS", cursive ;
+	font-size:26px;
+	 
+	padding-top:6px;
+	
+}
+/* TO CHANGE FROM MOBILE TO DESKTOP SCREEN */	
+.mainNavBar
+{
+	display:block;
+	
+}
+.mobileNavOpen {
+	width:60px;
+	float:left;
+	margin-left:5px;
+	color:#FFF;
+	display:none;
+
+}	
+
+
+
+#rightNav {
+	position:relative;
+width:400px;
+float:right;
+ 
+} 	
+	
+.rightNav {
+	position:relative;
+	width:80px;
+	float:right;
+	margin-left:5px;
+	color:#FFF;
+	margin-right:20px;
+	margin-top:20px;
+	text-align:right;
+	
+	 
+
+}
+
+
+
+
+ 
+
+.rightNavcolor {
+	position:relative;
+	display:inline-block;
+	width:2px;
+	float:right;
+	margin-left:5px;
+	color:#FFF;
+	margin-right:20px;
+	margin-top:10px;
+	
+
+}		
+	.rightNavcolor .tooltiptext{
+		visibility:hidden;
+		width:70px;
+		background-color:black;
+		color:#fff;
+		text-align:center;
+		padding:5px 0;
+		border-radius:6px;
+		position:absolute;
+		font-size:12px;
+		 
+		text-align:center;
+		margin-top:5px;
+		margin-left:65px;
+		 
+	}
+	
+	
+	.rightNavcolor .tooltiptextSetting{
+		visibility:hidden;
+		width:70px;
+		background-color:black;
+		color:#fff;
+		text-align:center;
+		padding:5px 0;
+		border-radius:6px;
+		position:absolute;
+		font-size:12px;
+		 
+		text-align:center;
+		margin-top:5px;
+		margin-left:25px;
+		 
+		
+		
+		 
+	 
+	}
+	
+	
+	
+	.rightNavcolor:hover .tooltiptext{
+		visibility:visible;
+		z-index:2;
+		}
+		
+		.rightNavcolor:hover .tooltiptextSetting{
+		visibility:visible;
+		z-index:2;
+		}
+
+
+.navbar-menu {
+	height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  background-color: #222D32;
+  overflow: auto;
+   
+	border:3px ;
+	border-color:#222D32;
+ 
+}
+.navbar {
+	/*height: 285px; */
+	min-height:500px;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  background-color: #222D32;
+  overflow: auto;
+ padding:0;
+ margin-top:48px;
+ 
+ 
+ 
+}
+
+
+
+
+.navbar a {
+  
+  text-align:center;
+  padding: 12px;
+ 
+  text-decoration: none;
+  font-size: 15px;
+  width:100%;
+  
+   border:1px solid black;
+  border-width:1px;
+  border-right:none;
+  border-left:none;
+   border-top:none;
+ 
+ 
+  border-color:#2C3B41;
+  color:#8AA4AF;
+  
+}
+
+.navbar a:hover {
+  background-color: #2C3B41;
+    color: #E6E6E6;
+    
+}
+  
+  .active { 
+	 
+	  background-color: #4CAF50;  
+ 
+ background-color:#2C3B41;
+ 
+   color: #E6E6E6;
+     
+}
+ 
+#settings {
+	padding-top:0px;
+	}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* RIGHT SIDE NAVIGATION */
+
+.right-sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  
+  top: -55px;
+  right: 0;
+  background-color: #222D32;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:48px;
+ 
+  z-index: 111;
+   
+}
+
+.right-sidenav a {
+	 font-size: 14px;
+   padding: 8px 8px 8px 32px; 
+  
+ 
+    
+  text-decoration: none;
+  
+  border:1px solid black;
+  border-width:1px;
+  border-right:none;
+  border-left:none;
+   border-top:none;
+ 
+ 
+  border-color:#2C3B41;
+  color:#8AA4AF;
+ 
+  
+ 
+  text-align:left;
+   margin-left:5px;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.right-sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.right-sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+ 
+ 
+
+/* SIDE NAVIGATION */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #222D32;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:48px;
+   
+}
+
+.sidenav a {
+	 font-size: 14px;
+   padding: 8px 8px 8px 32px; 
+  
+ 
+    
+  text-decoration: none;
+  
+  border:1px solid black;
+  border-width:1px;
+  border-right:none;
+  border-left:none;
+   border-top:none;
+ 
+ 
+  border-color:#2C3B41;
+  color:#8AA4AF;
+ 
+  
+ 
+  text-align:left;
+   margin-left:5px;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+   
+  padding: 16px;
+ 
+}
+
+ 
+ #chronoExample {
+ 
+  
+  text-align:center;
+   padding-top:2%; 
+   width:98%;  
+   max-width:98%; 
+   min-width:96%; 
+    margin-left:12px;  
+   margin-right:12px;
+    
+    transition: margin-left .5s;
+}
+
+
+	  
+
+@media screen and (max-width: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 14px;}
+  
+  .navbar-menu {display:none};
+  #mainNavBar{display:none};
+  #navBar{display:none};
+  
+   .navbar {display:none};
+   #main2{width:98px; };
+    #main3{width:98px; };
+	 #main4{width:98px; };
+	  #main5{width:98px; };
+	  #main6{width:98px; };
+	  #main7{width:98px; };
+	  
+	  #chronoExample {
+ 
+  
+  text-align:center;
+   padding-top:2%; 
+   width:98%;  
+   max-width:98%; 
+   min-width:96%; 
+    margin-left:2px;  
+   margin-right:2px;
+    transition: margin-left .5s;
+	overflow:hidden;
+}
+	 
+	 /*mobile top menu */
+	 #rightNav {
+	position:relative;
+width:20%;
+float:right;
+text-align:right;
+} 	
+	 
+  
+   #contact-us,spaceMobile,tooltiptextSetting
+   {
+	   display:none;
+	   
+	   } 
+	   
+	 .rightNavcolor:hover .tooltiptext,.rightNavcolor:hover .tooltiptextSetting{
+		visibility: hidden;
+		display:none;  
+	    }
+	   .rightNavcolor {
+		   
+		 width:30px;
+		} 
+		
+		.mobileNavOpen {
+	width:20px;
+	 display:block;
+	margin-left:5px;
+	display:block;
+	
+	} 
+	.topMenuLogo {
+	position:relative;
+	width: 140px;
+}
+	#rightNav {
+	position:relative;
+width:170px;
+float:right;
+  
+}
+
+.rightNavcolor { 
+
+padding-right;
+ margin:3px;
+margin-top:10px;
+
+ 
+ 
+
+}
+ 
+ 
+ #chronoExample {
+ 
+  
+   
+   width:98%;  
+    
+    margin-left:4px;  
+   margin-right:3px;
+    
+    transition: margin-left .5s;
+}
+}

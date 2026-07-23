@@ -1,0 +1,437 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.title_head	
+{
+	font-size: 18px;
+	LINE-HEIGHT: 210%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-justify:inter-cluster;
+	text-shadow:#999;
+	padding-left:30px;
+
+	
+}
+
+.title_head_banner		
+{
+	font-size: 17px;
+	LINE-HEIGHT: 210%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-justify:inter-cluster;
+	text-shadow:#999;
+
+	
+}
+
+
+
+select[name=category]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+select[name=eleType]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+select[name=lga]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+
+select[name=state]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+select[name=zone]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+select[name=constituency]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+select[name=year]
+{
+     
+    /*background:transparent; */
+	
+   height:30px;
+    
+    width:330px;
+    -webkit-appearance: none;
+	
+	color:#666;
+	background:#fff;
+	border:1px solid #C6D9E9;
+	margin:0 0.25em 0 0;
+	padding:4px 7px;
+	
+	 -moz-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	-webkit-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+	/*background:transparent;*/
+}
+
+
+
+
+
+
+
+.label-left
+{
+	  
+	margin-left:5px;
+	position:relative; 
+	width:320px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	
+	
+	 
+}
+.label-right
+{
+	   
+	margin-left:5px;
+	position:relative;
+	
+	width:340px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	 
+	float:right;
+	 
+	
+}
+
+.label
+{
+	 
+	margin:5px;
+	position:relative;
+	
+	width:320px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	  
+	
+	 
+	
+}
+
+.lstMenuleft
+{
+	 
+	 position:relative;
+	
+	 
+	margin-top:5px;
+	margin-bottom:5px;
+ 	width:360px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-justify:inter-cluster;
+ 
+	
+}
+
+
+.lstMenuright
+{
+	 
+	 position:relative;
+	 margin-top:5px;
+	margin-bottom:5px;
+ 	width:360px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+ 
+}
+
+.hide_question
+{
+
+  display:none;
+ 
+}
+
+
+.show_table
+{
+  display:block !important;
+   
+ }
+
+
+.show_question
+{
+
+  display:block !important;
+  margin-top:5px;
+   margin-left:5px;
+	margin-bottom:5px;
+ 	width:360px;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-justify:inter-cluster;
+   
+ }
+ 
+ .sms_bg{
+	     content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    
+    background: url(../images/sms_bg.png)  no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+ }
+ 
+ .marquee_msg		
+{
+	font-size: 14px;
+	LINE-HEIGHT: 150%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+	 
+	margin:5px;
+	height:280px;
+	
+	
+}
+ 
+@media only screen and (max-width:420px) {
+	
+
+.label-left
+{
+	 
+	 
+	 
+	 
+	margin-left:5px;
+	position:relative; 
+	width:98%;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	
+	 
+	 
+}
+.label-right
+{
+	 
+	 float:left; 
+	margin:5px;
+	 
+	position:relative;
+	
+	width:98%;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	
+	
+	 
+	
+}
+
+.label
+{
+	 
+	margin:5px;
+	position:relative;
+	
+	width:98%;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	  
+	
+	 
+	
+}
+
+.lstMenuleft
+{
+	 
+	 position:relative;
+	
+	 
+	margin-top:5px;
+	margin-bottom:5px;
+ 	width:98%;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-justify:inter-cluster;
+ 
+	
+}
+
+
+.lstMenuright
+{
+	 
+	 position:relative;
+	 
+	
+	width:98%;
+	font-size: 14px;
+	LINE-HEIGHT: 175%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	color:#fff;
+ 
+}
+
+
+}

@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">Cargoland</string>
+    <string name="title_activity_name">Name</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="title_msg"></string>
+    <string name="radio_negative">Male</string>
+    <string name="radio_positive">Female</string>
+
+
+    <string name="radio_no">No</string>
+    <string name="radio_yes">Yes</string>
+
+    <string name="radio_international">International</string>
+    <string name="radio_local">Inter-State</string>
+    <string name="radio_intra_state">Intra-State</string>
+
+
+    <string name="select3">Select Title</string>
+    <string name="select5">Select Sensitivity</string>
+    <string name="select4">Select State</string>
+
+
+    <string-array name="state_array">
+        <item>Select</item>
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Enugu</item>
+        <item>Imo</item>
+        <item>Gombe</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nassarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+        <item>FCT</item>
+    </string-array>
+
+
+    <string name="select6">Select LGA</string>
+    <string name="select7">Select </string>
+
+    <string name="selectQuantity"> Select Kg</string>
+
+    <string name="selectYear">Select Year</string>
+    <string name="selectMonth">Select Month</string>
+
+
+    <string name="send_items">Send</string>
+    <string name="track_items">Tracking</string>
+    <string name="calculate_items">Calculator</string>
+    <string name="help_users">Help</string>
+
+    <string name="logout_user">Shipment</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_email">EmailActivity</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="title_activity_address">AddressActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="title_activity_parcel_letter">ParcelLetterActivity</string>
+    <string name="title_activity_tracking">TrackingActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_receiver">ReceiverActivity</string>
+    <string name="title_activity_calculator">CalculatorActivity</string>
+    <string name="title_activity_payment_thank">PaymentThankActivity</string>
+    <string name="title_activity_user_login">UserLogin</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_bottom_nav">MainActivity</string>
+    <string name="title_activity_bottom_navig">MainActivity</string>
+    <string name="title_activity_bottom">MainActivity</string>
+    <string name="title_activity_main2">Cargoland</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_pick_up_address">PickUpAddress</string>
+    <string name="title_activity_sender_review">Sender Review</string>
+    <string name="title_activity_price">PriceActivity</string>
+    <string name="title_activity_sending_restriction">sendingRestrictionActivity</string>
+    <string name="title_activity_sender">SenderActivity</string>
+    <string name="title_activity_register_review">RegisterReview</string>
+    <string name="title_activity_http_parse">HttpParse</string>
+    <string name="title_activity_d_b_helper">DBHelper</string>
+    <string name="title_activity_my_photo">MyPhotoActivity</string>
+    <string name="title_activity_pick_up_decision">PickUpDecisionActivity</string>
+    <string name="title_activity_user_history">Payment History</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_video_splash">VideoSplash</string>
+    <string name="title_activity_forgtten_email">Forgot Login Details</string>
+    <string name="title_activity_outstanding_payment">Pending Payment</string>
+    <string name="title_activity_live_chat">Live Chat</string>
+    <string name="title_activity_user_profile">UserProfile</string>
+
+
+</resources>

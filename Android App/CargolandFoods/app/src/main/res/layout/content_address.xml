@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp" >
+                    <Button
+                        android:id="@+id/button2"
+
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="41dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/transparents"
+
+                        app:backgroundTint="@null"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-34dp"
+                        android:background="@color/transparents"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+
+                        android:text="Sign up"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+
+
+
+
+                </LinearLayout>
+                <!-- Text line starts here -->
+                <!-- Text line starts here -->
+                <LinearLayout
+                    android:id="@+id/linearLayout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/lev1"
+                        android:layout_width="match_parent"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+
+                        android:importantForAutofill="no"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+
+                        android:text="Name" />
+
+
+                    <TextView
+                        android:id="@+id/lev2"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:importantForAutofill="no"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Email" />
+
+
+
+                    <TextView
+                        android:id="@+id/lev3"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Password" />
+
+                    <TextView
+                        android:id="@+id/lev4"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Address" />
+
+                    <TextView
+                        android:id="@+id/lev5"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_ash"
+                        android:visibility="gone"
+                        android:text="Others" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text="Where is your Address ?" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text=" * denote mandatory" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+
+
+                    <!--
+
+                                        <TextView
+                                            android:id="@+id/fname"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="10dp"
+
+                                            android:importantForAutofill="no"
+
+                                            android:ems="10"
+
+                                            android:text="Street Address:*" />
+                                        <EditText
+
+                                            android:id="@+id/txtAddress"
+                                            android:layout_width="fill_parent"
+
+
+                                            android:layout_height="match_parent"
+
+                                            android:layout_marginTop="2dp"
+
+                                            android:background="@xml/text_style"
+                                            android:ems="10"
+                                            android:gravity="top"
+                                            android:hint="Street Address"
+
+                                            android:inputType="text"
+                                            android:minHeight="15dp"
+                                            android:padding="10dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textColorHint="#C1C1C1" />
+
+                                        <TextView
+                                            android:id="@+id/City"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="10dp"
+
+                                            android:importantForAutofill="no"
+
+                                            android:ems="10"
+
+                                            android:text="City / Town:*" />
+                                        <EditText
+                                            android:id="@+id/txtCity"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@xml/text_style"
+
+                                            android:ems="10"
+                                            android:gravity="top"
+                                            android:hint="City / Town"
+                                            android:inputType="text"
+
+                                            android:minHeight="15dp"
+                                            android:padding="10dp"
+
+                                            android:text=""
+
+                                            android:textColor="#000000"
+                                            android:textColorHint="#C1C1C1" />
+
+                                        <TextView
+                                            android:id="@+id/postcode"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="10dp"
+
+                                            android:importantForAutofill="no"
+
+                                            android:ems="10"
+                                            android:visibility="gone"
+                                            android:text="Post Code:" />
+                                        <EditText
+
+                                            android:id="@+id/txtPostcode"
+                                            android:layout_width="fill_parent"
+
+
+                                            android:layout_height="match_parent"
+
+                                            android:layout_marginTop="2dp"
+
+                                            android:background="@xml/text_style"
+                                            android:ems="10"
+                                            android:gravity="top"
+                                            android:hint="Post Code"
+                                            android:visibility="gone"
+                                            android:inputType="text"
+                                            android:minHeight="15dp"
+                                            android:padding="10dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textColorHint="#C1C1C1" />
+
+                    -->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+
+                        android:id="@+id/textField2"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Street Address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtAddress"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+
+                        android:id="@+id/textField1"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="City / Town*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtCity"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+
+                        android:id="@+id/textField4"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Bus Stop*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtNearest_bus_stop"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+
+                        android:id="@+id/textField3"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Mobile No*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtMobileNo"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+                            android:maxLength="11"
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:text="Country:*" />
+
+                    <!--
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20px"
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/select3" />
+-->
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginBottom="20px"
+                        android:layout_height="50dp"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Country"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+                    <TextView
+                        android:id="@+id/txvState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+
+
+                        android:importantForAutofill="no"
+
+
+                        android:ems="10"
+                        android:text="State:*" />
+
+                    <!--
+                    <Spinner
+                        android:id="@+id/spinnerState"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20px"
+                        android:entries="@array/state_array"
+                        android:visibility="gone"
+
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/select4" />
+-->
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerState"
+                        android:layout_width="fill_parent"
+                        android:entries="@array/state_array"
+                        android:layout_marginBottom="20px"
+                        android:layout_height="50dp"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select4"
+
+                        app:smsp_searchTextColor="#000000"
+                        app:smsp_searchBackgroundColor="@color/transparent"
+
+                        app:smsp_outlinedBoxColor="?android:attr/textColorPrimary"
+                        app:smsp_searchHintColor="#000000"
+
+
+                        android:textColor="?android:attr/textColorPrimary"
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="State"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="?android:attr/textColorPrimary"
+                        app:smsp_itemColor="?android:attr/textColorPrimary"
+
+                        app:smsp_itemListColor="#000000"
+
+
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="?android:attr/textColorPrimary"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="@color/transparents"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="@color/transparents"
+
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+                    <TextView
+                        android:id="@+id/txvLGA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+
+                        android:importantForAutofill="no"
+
+
+                        android:ems="10"
+                        android:text="L.G.A:*" />
+
+                    <!--
+                     <Spinner
+                         android:id="@+id/spinnerLGA"
+                         android:layout_width="fill_parent"
+                         android:layout_height="50dp"
+                         android:layout_marginTop="2dp"
+                         android:visibility="gone"
+                         android:layout_marginBottom="15px"
+
+                         android:background="@xml/spinner_style"
+                         android:prompt="@string/select6" />
+ -->
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerLGA"
+                        android:layout_width="fill_parent"
+
+                        android:layout_marginBottom="15px"
+                        android:layout_height="50dp"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select6"
+
+
+                        app:smsp_searchTextColor="#000000"
+                        app:smsp_searchBackgroundColor="@color/transparent"
+
+                        app:smsp_outlinedBoxColor="?android:attr/textColorPrimary"
+                        app:smsp_searchHintColor="#000000"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="LGA"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+
+                        android:textColor="?android:attr/textColorPrimary"
+                        app:smsp_hintColor="?android:attr/textColorPrimary"
+                        app:smsp_itemColor="?android:attr/textColorPrimary"
+
+
+                        app:smsp_itemListColor="#000000"
+
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="@color/transparents"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="@color/transparents"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+                    <!--
+
+                                        <TextView
+                                            android:id="@+id/mobile"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ems="10"
+
+                                            android:text="Mobile Number:*" />
+
+                                        <EditText
+
+                                            android:id="@+id/txtMobileNo"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@xml/text_style"
+
+                                            android:importantForAutofill="no"
+
+
+                                            android:ems="10"
+                                            android:gravity="top"
+                                            android:hint="Mobile Number"
+                                            android:inputType="number"
+
+                                            android:lines="5"
+                                            android:minHeight="15dp"
+                                            android:padding="10dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textColorHint="#C1C1C1" />
+                                        <TextView
+                                            android:id="@+id/referral"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ems="10"
+                                            android:visibility="gone"
+                                            android:text="Referral Code:" />
+
+                                        <EditText
+
+                                            android:id="@+id/txtReferral"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@xml/text_style"
+                                            android:visibility="gone"
+                                            android:importantForAutofill="no"
+
+
+                                            android:ems="10"
+                                            android:gravity="top"
+                                            android:hint="Referral Code"
+                                            android:inputType="text"
+
+                                            android:lines="5"
+                                            android:minHeight="15dp"
+                                            android:padding="10dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textColorHint="#C1C1C1" />
+
+                                            -->
+
+
+                    <Button
+                        android:id="@+id/butReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_botton"
+                        android:text="Next "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

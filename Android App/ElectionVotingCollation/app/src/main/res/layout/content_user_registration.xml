@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+
+                android:clickable="true"
+                android:focusableInTouchMode="true">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="504dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/logo6b" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp" >
+
+                        <Button
+                            android:id="@+id/button2"
+
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="41dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/transparents"
+                            app:backgroundTint="@null"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+                            android:textColor="#D91F2B"
+                            android:textSize="54sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtLogin"
+                            android:layout_width="124dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="-34dp"
+
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:ems="10"
+                            android:text="Sign up"
+
+                            android:textSize="17sp"
+                            android:textStyle="bold|italic" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <!-- Text line starts here -->
+                    <LinearLayout
+                        android:id="@+id/linearLayout_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/lev1"
+                            android:layout_width="match_parent"
+
+                            android:importantForAutofill="no"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+
+                            android:textSize="14sp"
+                            android:textColor="@color/colorGreen"
+                            android:ems="10"
+
+                            android:background="@drawable/line_indicator_green"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:inputType="textPersonName"
+                            android:gravity="bottom|center"
+                            android:text="Name" />
+
+
+                        <TextView
+                            android:id="@+id/lev2"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+
+                            android:importantForAutofill="no"
+
+                            android:gravity="bottom|center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="14sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:background="@drawable/line_indicator_green"
+                            android:text="Email" />
+
+
+
+                        <TextView
+                            android:id="@+id/lev3"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:gravity="bottom|center"
+
+                            android:importantForAutofill="no"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="14sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:background="@drawable/line_indicator_green"
+                            android:text="Password" />
+
+                        <TextView
+                            android:id="@+id/lev4"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:gravity="bottom|center"
+
+                            android:importantForAutofill="no"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="14sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:background="@drawable/line_indicator_green"
+                            android:text="Polling Unit" />
+
+                    </LinearLayout>
+
+
+
+                    <!--
+                            <Spinner
+                                android:id="@+id/spinner2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:entries="@array/country_array"
+                                android:gravity="center"
+                                android:prompt="@string/select2" />
+                    -->
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:layout_gravity="left"
+                        android:importantForAutofill="no"
+
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:text="State:*" />
+
+
+                    <!--
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20px"
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/select3" />
+            -->
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="wrap_content"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select2"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Country"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+                    <!--
+
+
+
+
+
+
+
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3" />
+            -->
+                    <TextView
+                        android:id="@+id/lbltLGA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:visibility="gone"
+                        android:importantForAutofill="no"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+
+                        android:text="LGA:*" />
+
+
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="wrap_content"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="LGA"
+                        app:smsp_enableFloatingLabel="true"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+
+                    <!--
+                            <Spinner
+                                android:id="@+id/spinner4"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:prompt="@string/select4" />
+
+                                -->
+                    <TextView
+                        android:id="@+id/lblWard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:text="Ward:*" />
+
+
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="wrap_content"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Ward"
+                        app:smsp_enableFloatingLabel="true"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+                    <!--
+                            <Spinner
+                                android:id="@+id/spinner5"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.78"
+                                android:prompt="@string/select5" />
+                                -->
+
+                    <TextView
+                        android:id="@+id/lblPoll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:layout_gravity="left"
+                        android:importantForAutofill="no"
+
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:text="Polling Unit:*" />
+
+
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner5"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="wrap_content"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Polling Unit"
+                        app:smsp_enableFloatingLabel="true"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+
+
+                    <EditText
+                        android:id="@+id/txtFname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+
+                        android:focusable="true"
+                        android:gravity="left"
+                        android:hint="First Name"
+                        android:textColorHighlight="#3A622A"
+                        android:textColorHint="#3A622A"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/txtSurname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+
+                        android:focusable="true"
+                        android:gravity="left"
+                        android:hint="Surname"
+                        android:textColorHighlight="#3A622A"
+                        android:textColorHint="#3A622A"
+                        android:visibility="gone" />
+
+
+                    <EditText
+                        android:id="@+id/txtMobileNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:hint="Phone No"
+                        android:textColorHint="#3A622A"
+                        android:ems="10"
+                        android:visibility="gone"
+                        android:inputType="phone" />
+
+                    <EditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:hint="Email Address"
+                        android:visibility="gone"
+                        android:textColorHint="#3A622A"
+                        android:ems="10"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/txtPassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        android:ems="10"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColorHint="#3A622A"
+                        android:visibility="gone" />
+
+
+
+                    <EditText
+                        android:id="@+id/txtRetypePassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        android:ems="10"
+                        android:hint="Re-Type Password"
+                        android:inputType="textPassword"
+                        android:textColorHint="#3A622A"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <Button
+                            android:id="@+id/butCancel"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+
+                            android:text="Cancel" />
+
+                        <!--
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/button_label" />
+                            -->
+                        <Button
+                            android:id="@+id/button"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            app:backgroundTint="@null"
+                            android:background="@drawable/background_botton"
+                            android:text="Next"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="#FFFFFF" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView></LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Buttons 
+------------ */
+but,
+input.but,
+a.but,
+input[type="submit"]{
+	font-family:Verdana, Geneva, sans-serif;
+	background:#2e77ae;
+	
+	background: -moz-linear-gradient(top, #5590bd, #2e77ae);
+	background: -webkit-linear-gradient(top, #5590bd, #2e77ae);
+	background: -o-linear-gradient(top, #5590bd, #2e77ae);
+	background: -ms-linear-gradient(top, #5590bd, #2e77ae);
+	background: linear-gradient(top, #5590bd, #2e77ae);
+	box-shadow:inset -1px -1px 0 rgba(255,255,255,.1), inset 1px 1px 0 rgba(255,255,255,.3);
+	border:1px solid #2e77ae;
+	
+	
+	color:#fff!important;
+	
+	display:inline-block;
+	padding:2px 12px 4px; 
+	cursor:pointer;
+	 border-radius:5px; 
+	
+	font-size:14px;
+	margin:0 .25em;
+	white-space:nowrap;
+	text-decoration:none;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out; }
+	
+	but:hover,
+	input.but:hover,
+	a.but:hover,
+	input[type="submit"]:hover {
+		background:#51A12B;
+		background: -moz-linear-gradient(top, #65C935, #51A12B);
+		background: -webkit-linear-gradient(top, #65C935, #51A12B);
+		background: -ms-linear-gradient(top, #65C935, #51A12B);
+		background: linear-gradient(top, #65C935, #51A12B);
+		/*border-color:#51A12B; */
+		box-shadow:inset -1px -1px 0 rgba(255,255,255,.5), inset 1px 1px 0 rgba(255,255,255,.5);}
+		
+		but:focus,
+		input.but:focus,
+		a.but:focus,
+		input[type="submit"]:focus { background:#51A12B;}
+		
+		
+		
+		/* Red Button Start here */
+		
+		
+		
+		delete,
+input.delete,
+a.delete,
+input[name="delete"]{
+	font-family:Verdana, Geneva, sans-serif;
+	background:#2e77ae;
+	background: -moz-linear-gradient(top, #F81510, #980905);
+	background: -webkit-linear-gradient(top, #F81510, #980905);
+	background: -o-linear-gradient(top, #F81510, #980905);
+	background: -ms-linear-gradient(top, #F81510, #980905);
+	background: linear-gradient(top, #F81510, #980905);
+	box-shadow:inset -1px -1px 0 rgba(255,255,255,.1), inset 1px 1px 0 rgba(255,255,255,.3);
+	border:1px solid #2e77ae;
+	color:#fff!important;
+	/*
+	text-shadow: 1px 1px 1px rgba(0,0,0,.7); */
+	display:inline-block;
+	padding:2px 12px 4px; 
+	cursor:pointer;
+	border-radius:5px;
+	
+	font-size:14px;
+	margin:0 .25em;
+	white-space:nowrap;
+	text-decoration:none;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out; }
+	
+	delete:hover,
+	input.delete:hover,
+	a.delete:hover,
+	input[name="delete"]:hover {
+		background:#51A12B;
+		background: -moz-linear-gradient(top, #F81510, #F81510);
+		background: -webkit-linear-gradient(top, #F81510, #F81510);
+		background: -ms-linear-gradient(top, #F81510, #F81510);
+		background: linear-gradient(top, #F81510, #F81510);
+		border-color:#51A12B;
+		box-shadow:inset -1px -1px 0 rgba(255,255,255,.5), inset 1px 1px 0 rgba(255,255,255,.5);}
+		
+		delete:focus,
+		input.delete:focus,
+		a.delete:focus,
+		input[name="delete"]:focus { background:#F81510;}
+		
+		
+.del,
+a.del
+{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#fff!important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	display:inline-block;
+	padding:1px 4px 2px; 
+	cursor:pointer;
+	font-weight:bold;
+	font-size:13px;
+}
+
+a.del:hover
+{
+	text-decoration:underline;
+		
+}
+
+.update,
+a.update
+{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#fff!important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	display:inline-block;
+	padding:1px 4px 2px; 
+	cursor:pointer;
+	font-weight:bold;
+	font-size:13px;
+}
+
+a.del:hover
+{
+	text-decoration:underline;
+		
+}
+a.update:hover
+{
+	text-decoration:underline;
+		
+}	
+	
+/* BOOKMARK	 BUTTON  STAT HERE */
+	
+		bookMark,
+input.bookMark,
+a.bookMark,
+input[name="bookMark"]{
+	font-family:Verdana, Geneva, sans-serif;
+	background:#2e77ae;
+	background: -moz-linear-gradient(top, #5590bd, #2e77ae);
+	background: -webkit-linear-gradient(top, #5590bd, #2e77ae);
+	background: -o-linear-gradient(top, #5590bd, #2e77ae);
+	background: -ms-linear-gradient(top, #5590bd, #2e77ae);
+	background: linear-gradient(top, #5590bd, #2e77ae);
+	box-shadow:inset -1px -1px 0 rgba(255,255,255,.1), inset 1px 1px 0 rgba(255,255,255,.3);
+	border:1px solid #2e77ae;
+	color:#fff!important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.7);
+	display:inline-block;
+	padding:2px 12px 4px; 
+	cursor:pointer;
+	border-radius:5px;
+	
+	font-size:15px;
+	margin:0 .25em;
+	white-space:nowrap;
+	text-decoration:none;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out; }
+	
+	bookMark:hover,
+	input.bookMark:hover,
+	a.bookMark:hover,
+	input[name="bookMark"]:hover {
+		background:#51A12B;
+		background: -moz-linear-gradient(top, #FFA500, #FFA500);
+		background: -webkit-linear-gradient(top, #FFA500, #FFA500);
+		background: -ms-linear-gradient(top, #FFA500, #FFA500);
+		background: linear-gradient(top, #FFA500, #FFA500);
+		border-color:#51A12B;
+		box-shadow:inset -1px -1px 0 rgba(255,255,255,.5), inset 1px 1px 0 rgba(255,255,255,.5);}
+		
+		bookMark:focus,
+		input.bookMark:focus,
+		a.bookMark:focus,
+		input[name="delete"]:bookMark { background:#FFA500;}
+		
+		
+ 
+		

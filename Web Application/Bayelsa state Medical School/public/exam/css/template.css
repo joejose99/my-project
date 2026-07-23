@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body{
+	background-color: #DCEDF7;
+
+}
+
+#container{
+width:100%;
+height:auto;
+margin-top:0px;
+	margin-right:auto;
+	
+	margin-left:auto;
+	 
+	margin-bottom:auto;
+ 
+}
+
+#header{
+ Position:relative;
+margin-left:auto;
+margin-right:auto;
+margin-top:0px;
+width: 100%;
+text-align:center;
+height: auto;
+ }
+ 
+ 
+ #container_text_Admin{
+
+	 
+}
+
+
+ 
+ 
+ 
+ #container_text{
+position: relative;	
+width: 960px;
+ margin-top:1%;  
+margin-bottom:5%;
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+    position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+   height:auto;
+  /* max-height:595px; */
+   max-height:622px; 
+ }
+
+
+
+
+#container_result {
+	 clear:both;
+	position: fixed;
+	left:50%;
+	top:50%;
+margin:auto;
+
+
+ width: 600px;
+
+padding-top:5px;
+background-color:#fff;
+  border: 2px #DCEDF7 solid; 
+  transform:translate(-50%,-50%);
+ 
+    
+	
+	
+}
+
+
+
+#container_setExam {
+	 clear:both;
+	position: fixed;
+	left:50%;
+	top:50%;
+margin:auto;
+
+
+ width: 710px;
+
+//padding-top:5px;
+background-color:#fff;
+  border: 2px #DCEDF7 solid; 
+  transform:translate(-50%,-50%);
+ 
+    
+	
+	
+}
+
+#start {
+	 clear:both;
+	position: fixed;
+	left:50%;
+	top:50%;
+margin:auto;
+
+
+ width: 600px;
+
+//padding-top:5px;
+background-color:#fff;
+  border: 2px #DCEDF7 solid; 
+  transform:translate(-50%,-50%);
+ 
+    
+	
+	
+}
+
+
+#container_instruction {
+	clear:both;
+	 
+width: 960px;
+
+ 
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+  /*height:590px;*/
+  
+   position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+  height:auto;
+	
+}
+
+
+
+#container_registration {
+	clear:both;
+	position: relative;	
+width: 550px;
+
+ 
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+  /*height:590px;*/
+  
+   position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+  height:auto;
+	
+}
+
+
+
+
+#container_student_login {
+	clear:both;
+	position: relative;	
+width: 550px;
+
+ 
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+  /*height:590px;*/
+  
+   position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+  height:auto;
+	
+}
+
+
+#container_search {
+	clear:both;
+	position: relative;	
+/* width: 590px; */
+width: 550px;
+ 
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+  /*height:590px;*/
+  
+   position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+  height:auto;
+	
+}
+
+#container_search_fName {
+	clear:both;
+	position: relative;	
+width: 590px;
+
+ 
+ margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+
+background-color:#fff;
+  
+
+  border: 2px #DCEDF7 solid; 
+   
+  /*height:590px;*/
+  
+   position: fixed;
+	left:50%;
+	top:50%;
+  transform:translate(-50%,-50%);
+  
+  height:auto;
+	
+}
+
+
+
+
+
+#calculator
+{
+	width:400px;
+	position:absolute;
+	margin-left:55%;
+	 visibility:hidden; 
+ 
+	z-index:3000;
+	
+}
+
+
+
+
+#close-calculator
+{
+	width:200px;
+	position:absolute;
+	margin-left:86%;
+	margin-top:10px;
+	 visibility:hidden; 
+ 
+	z-index:4000;
+	
+}
+
+
+
+ #numb_ques{
+	 position: relative;
+	 width: 930px;
+	 margin-left:5px;
+	 
+	 background-color:#F8FAF5;
+	 border: 1px #C3D1A3 solid;
+	 margin-bottom:5px;
+	
+	 padding-bottom:5px;
+	 overflow:scroll;
+	  height:auto;
+	  max-height:120px; 
+ }
+ 
+ 
+  #ques_option{
+	 position: relative;
+	 width: 930px;
+	 margin-top:20px;
+	 margin-left:5px;
+	 margin-right:5px;
+	 height:auto;
+	 background-color:#F8FAF5;
+	 border: 1px #C3D1A3 solid;
+	 
+	 padding-right:5px;
+	 padding-bottom:5px;
+	  overflow:scroll;
+ }
+ 
+ 
+ #ques_option2{
+	 position: relative;
+	 width: 930px;
+	 margin-top:20px;
+	 margin-left:5px;
+	 margin-right:5px;
+	 height:auto;
+	 background-color:#F8FAF5;
+	 border: 1px #C3D1A3 solid;
+	 
+	 padding-right:5px;
+	 padding-bottom:5px;
+	  overflow:scroll;
+ }
+ #result-score
+ {
+	 position:relative;
+	 background-color:#F8FAF5;
+	 border: 1px #C3D1A3 solid;
+	 margin:10px; 
+	 
+ }
+ 
+ #txtEmail
+{
+padding-top:3px;
+  width:300px;  
+height:auto;
+padding-left:20px;
+
+}
+ 
+ .nav-list {
+
+	margin:0 auto;
+    padding:0;
+    text-align:left; /* Alignment of each top-level menu items within the UL */
+	 margin-left:5px;
+    width:930px;
+    font-size:18px;
+    background:#F8FAF5;
+    display:inline-block;
+    list-style:none;
+    position:relative;
+    z-index:999999990; 
+	 
+}
+
+ 
+.nav-item {
+	
+	
+	margin:0;
+    padding:0;
+    
+	 
+	 color:#000; 
+      font-size:15px;
+    display:inline-block;
+    *display:inline;  
+    zoom:1;   /*for IE6-7*/
+    
+	 
+	   /*This determines the height of the menu*/
+	margin-top:5px
+    vertical-align:middle;
+    transition:background-color 0.3s;
+    outline:none;
+	
+	LINE-HEIGHT:40%;
+	
+	-moz-user-select:none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+	 
+		padding:8px;
+	 
+	position:relative;
+	
+     
+       /*This determines the height of the menu*/
+     vertical-align:middle;
+	margin-left:0;
+	margin-top:6px;
+     width:15px;
+	 border: 2px #DCEDF7 solid; 
+}
+ 
+ 
+ 
+.hide_question
+{
+
+  display:none;
+   
+ 
+}
+
+
+.show_question
+{
+
+  display:block !important;
+   
+ }
+	
+	
+ .txtFocus
+{
+
+  color:#fff;
+  border-collapse:collapse;
+  border-color:#fff;
+  border:none;
+  cursor-color:#fff;
+  cursor:url('exam/images/cursor.png');
+   
+ 
+}

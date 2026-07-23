@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{634E63DB-C1AE-40E9-B0A9-3E578ADFBB62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>PrjChurch</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PrjChurch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PrjChurch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ADODB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="WindowsApplication1.My" />
+    <Import Include="WindowsApplication1.My.Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAcct.Designer.vb">
+      <DependentUpon>frmAcct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddChurchName.Designer.vb">
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddChurchName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDepart.Designer.vb">
+      <DependentUpon>frmAddDepart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDepart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMember.Designer.vb">
+      <DependentUpon>frmAddMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBack.Designer.vb">
+      <DependentUpon>frmBack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbackup.Designer.vb">
+      <DependentUpon>frmbackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmbackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelOffering.Designer.vb">
+      <DependentUpon>frmCancelOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelOffering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelOtherIcome.Designer.vb">
+      <DependentUpon>frmCancelOtherIcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelOtherIcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChildren.Designer.vb">
+      <DependentUpon>frmChildren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChildren.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComment.Designer.vb">
+      <DependentUpon>frmComment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmComment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommentRP.Designer.vb">
+      <DependentUpon>frmCommentRP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCommentRP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurrency.Designer.vb">
+      <DependentUpon>frmCurrency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrency.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDptPuup.Designer.vb">
+      <DependentUpon>frmDptPuup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDptPuup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditDepart.Designer.vb">
+      <DependentUpon>frmEditDepart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditDepart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMember.Designer.vb">
+      <DependentUpon>frmEditMember.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeferRestor.Designer.vb">
+      <DependentUpon>frmDeferRestor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeferRestor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditWorkers.Designer.vb">
+      <DependentUpon>frmEditWorkers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditWorkers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpDepart.Designer.vb">
+      <DependentUpon>frmEmpDepart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpDepart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpEdit.Designer.vb">
+      <DependentUpon>frmEmpEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee_Display.Designer.vb">
+      <DependentUpon>frmEmployee_Display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee_Display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpsalpuup.Designer.vb">
+      <DependentUpon>frmEmpsalpuup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpsalpuup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpSearch.Designer.vb">
+      <DependentUpon>frmEmpSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmincome.Designer.vb">
+      <DependentUpon>frmincome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmincome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncomeEdit.Designer.vb">
+      <DependentUpon>frmIncomeEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncomeEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginEdit.Designer.vb">
+      <DependentUpon>frmLoginEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginServer.Designer.vb">
+      <DependentUpon>frmLoginServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMemberPuup.Designer.vb">
+      <DependentUpon>frmMemberPuup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMemberPuup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOffering.Designer.vb">
+      <DependentUpon>frmOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOffering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOfferingRp.Designer.vb">
+      <DependentUpon>frmOfferingRp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOfferingRp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherExp.Designer.vb">
+      <DependentUpon>frmOtherExp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherExp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherExpCan.Designer.vb">
+      <DependentUpon>frmOtherExpCan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherExpCan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherExpRp.Designer.vb">
+      <DependentUpon>frmOtherExpRp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherExpRp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPledge.Designer.vb">
+      <DependentUpon>frmPledge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPledge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPledgeEdit.Designer.vb">
+      <DependentUpon>frmPledgeEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPledgeEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPledgePuup.Designer.vb">
+      <DependentUpon>frmPledgePuup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPledgePuup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPledgeRedeem.Designer.vb">
+      <DependentUpon>frmPledgeRedeem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPledgeRedeem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPledgeRp.Designer.vb">
+      <DependentUpon>frmPledgeRp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPledgeRp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRedeemPlCan.Designer.vb">
+      <DependentUpon>frmRedeemPlCan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedeemPlCan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalary.Designer.vb">
+      <DependentUpon>frmSalary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalary_Cancel.Designer.vb">
+      <DependentUpon>frmSalary_Cancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalary_Cancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsalGrade.Designer.vb">
+      <DependentUpon>frmsalGrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsalGrade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalGradeEdit.Designer.vb">
+      <DependentUpon>frmSalGradeEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalGradeEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalpuup.Designer.vb">
+      <DependentUpon>frmSalpuup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalpuup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsalReport.Designer.vb">
+      <DependentUpon>frmsalReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsalReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsalYearRep.Designer.vb">
+      <DependentUpon>frmsalYearRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsalYearRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTithe.Designer.vb">
+      <DependentUpon>frmTithe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTithe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTitheCan.Designer.vb">
+      <DependentUpon>frmTitheCan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTitheCan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTitheRp.Designer.vb">
+      <DependentUpon>frmTitheRp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTitheRp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaction.Designer.vb">
+      <DependentUpon>frmTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransacton.Designer.vb">
+      <DependentUpon>frmTransacton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransacton.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkers.Designer.vb">
+      <DependentUpon>frmWorkers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiChurch.Designer.vb">
+      <DependentUpon>mdiChurch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiChurch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modChurch.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="splashscreen1.Designer.vb">
+      <DependentUpon>splashscreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splashscreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAcct.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAcct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddChurchName.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDepart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddDepart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMember.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBack.resx">
+      <DependentUpon>frmBack.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbackup.resx">
+      <DependentUpon>frmbackup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelOffering.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCancelOffering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelOtherIcome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCancelOtherIcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChildren.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChildren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmComment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommentRP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCommentRP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurrency.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCurrency.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDptPuup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDptPuup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditDepart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditDepart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMember.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditWorkers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditWorkers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpDepart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpDepart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee_Display.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmployee_Display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpsalpuup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpsalpuup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmincome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmincome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncomeEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIncomeEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLoginEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginServer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLoginServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMemberPuup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMemberPuup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOffering.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOffering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOfferingRp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOfferingRp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherExp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOtherExp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherExpCan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOtherExpCan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherExpRp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOtherExpRp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPledge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPledge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPledgeEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPledgeEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPledgePuup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPledgePuup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPledgeRedeem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPledgeRedeem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPledgeRp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPledgeRp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRedeemPlCan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRedeemPlCan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSalary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalary_Cancel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSalary_Cancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsalGrade.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmsalGrade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalGradeEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSalGradeEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalpuup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSalpuup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsalReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmsalReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsalYearRep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmsalYearRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTithe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTithe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTitheCan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTitheCan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTitheRp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTitheRp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaction.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransacton.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTransacton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWorkers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiChurch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mdiChurch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>splashscreen1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Original Introduction page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="splashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bgsove.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="trans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uni.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bgsove1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="splashScrean2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\%24this.Icon.ico" />
+    <None Include="Resources\PrintPreviewDialog1.Icon.ico" />
+    <None Include="name1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

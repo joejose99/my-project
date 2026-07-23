@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 73px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #939393;
+  -webkit-transition: .4s;
+  transition: .4s;
+  color:#fff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 23px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(41px);
+  -ms-transform: translateX(41px);
+  transform: translateX(41px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 35px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.rightNavLink {
+  color:#fff;
+  font-size:13px;
+  text-align:left;
+  margin-left:20px;
+  width:110px;
+  
+  
+  height:60px;
+  
+}
+
+
+.rightNavCheck {
+  color:#fff;
+   
+  
+  height:50px;
+  margin-left:125px; 
+  margin-top:-60px;
+  
+  
+}
+
+.settings{
+	
+	 text-align:center;
+  padding: 12px;
+ 
+  text-decoration: none;
+  font-size: 15px;
+  width:100%;
+  
+   border:1px solid black;
+  border-width:1px;
+  border-right:none;
+  border-left:none;
+   border-top:none;
+ 
+ 
+  border-color:#2C3B41;
+  color:#8AA4AF;
+  }

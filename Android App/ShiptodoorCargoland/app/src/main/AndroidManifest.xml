@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shiptodoor.shiptodoor">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".UserProfile"
+            android:label=" "
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".LiveChat"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_live_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OutstandingPayment"
+            android:label="@string/title_activity_outstanding_payment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ForgttenEmail"
+            android:label="@string/title_activity_forgtten_email"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="" />
+        <!--
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        -->
+        <activity
+            android:name=".UserHistory"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_user_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PickUpDecisionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_pick_up_decision"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyPhotoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_my_photo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyOnItemSelectedListener"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".DBHelper"
+            android:label="@string/title_activity_d_b_helper"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".HttpParse"
+            android:label="@string/title_activity_http_parse"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".RegisterReview"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_register_review"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SenderActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_sender"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sendingRestrictionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_sending_restriction"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PriceActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_price"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SenderReview"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_sender_review"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PickUpAddress"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_pick_up_address"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BottomNavigationActivity"
+            android:label="@string/title_activity_bottom_navigation" />
+        <activity
+            android:name=".HelpActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PaymentThankActivity"
+            android:label="@string/title_activity_payment_thank"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ThankYouActivity"
+            android:label=" "
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserLogin"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TrackingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/track_items"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_calculator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReceiverActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_receiver"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ParcelLetterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_parcel_letter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PaymentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_payment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddressActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_address"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PasswordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EmailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_email"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Name"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label=" " />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider> <!-- android:authorities="${applicationId}.provider" -->
+        <activity
+            android:name=".VideoSplash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

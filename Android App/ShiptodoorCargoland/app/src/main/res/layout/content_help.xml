@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp" >
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#ffffff"
+
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_left_24"
+            android:textColor="#D91F2B"
+            android:textSize="54sp" />
+
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-12dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:visibility="gone"
+            android:text="Help"
+            android:textSize="17sp"
+            android:textStyle="bold|italic" />
+
+
+
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/txt_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+
+                android:ems="10"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                android:importantForAutofill="no"
+
+
+                android:text="Kindly use this page to notify us of any issues or enquiry of our services, we will respond in no time." />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+
+                android:importantForAutofill="no"
+
+
+                android:text="Title:*" />
+
+
+            <EditText
+
+                android:id="@+id/txtTitle"
+                android:layout_width="fill_parent"
+
+
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="2dp"
+                android:layout_weight="2.65"
+                android:background="@xml/text_style"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Title"
+
+                android:inputType="textEmailAddress"
+                android:minHeight="15dp"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textColorHint="#C1C1C1" />
+
+            <TextView
+                android:id="@+id/surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+
+                android:importantForAutofill="no"
+
+                android:ems="10"
+
+                android:text="Message:*" />
+            <EditText
+                android:id="@+id/txtMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:background="@xml/text_style"
+
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Message"
+               android:inputType="textMultiLine"
+                android:lines="7"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+
+                android:minHeight="15dp"
+                android:padding="10dp"
+
+                android:text=""
+
+                android:textColor="#000000"
+                android:textColorHint="#C1C1C1" />
+
+
+
+            <Button
+                android:id="@+id/butReg"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="95dp"
+
+                android:background="@drawable/background_botton"
+                android:text="Send "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF" />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

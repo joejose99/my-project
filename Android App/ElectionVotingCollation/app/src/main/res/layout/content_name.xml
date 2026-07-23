@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp" >
+
+                    <Button
+                        android:id="@+id/button2"
+
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="41dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/transparents"
+                        app:backgroundTint="@null"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-34dp"
+
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:ems="10"
+                        android:text="Sign up"
+
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+                    <Button
+                        android:id="@+id/send_restriction"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="-40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:background="@xml/button_review_white"
+                        android:text="Sending Restrictions "
+                        android:visibility="gone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#D91F2B" />
+
+
+
+
+                </LinearLayout>
+
+                <!-- Image draw line -->
+                <!-- Text line starts here -->
+                <LinearLayout
+                    android:id="@+id/linearLayout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/lev1"
+                        android:layout_width="match_parent"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+                        android:text="Name" />
+
+
+                    <TextView
+                        android:id="@+id/lev2"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:importantForAutofill="no"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_ash"
+                        android:text="Email" />
+
+
+
+                    <TextView
+                        android:id="@+id/lev3"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_ash"
+                        android:text="Password" />
+
+                    <TextView
+                        android:id="@+id/lev4"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:importantForAutofill="no"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorAsh"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_ash"
+                        android:text="Polling Unit" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+
+                        android:importantForAutofill="no"
+                        android:textColor="?android:attr/textColorPrimary"
+                        app:backgroundTint="@null"
+
+
+                        android:text="What is your Name ?" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="25dp"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+                        app:backgroundTint="@null"
+                        android:text=" * denote mandatory" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="?android:attr/textColorPrimary"
+
+                        android:background="@color/transparents"
+                        android:importantForAutofill="no"
+
+                        android:text="Title:*" />
+
+                   <!--
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20px"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:background="@xml/spinner_style"
+                        android:prompt="@string/select3" />
+-->
+
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="70dp"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select3"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Country"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+
+<!--
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginBottom="20px"
+
+                        android:layout_height="50dp"
+                        android:background="@xml/spinner_style"
+                        android:layout_marginTop="2dp"
+                        android:prompt="@string/select2"
+
+                        app:smsp_floatingLabelColor="#000000"
+                        app:smsp_floatingLabelText="Country"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_hint="Select"
+                        app:smsp_hintColor="#000000"
+                        app:smsp_itemColor="#000000"
+                        app:smsp_itemListColor="#000000"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_isSearchable="true"
+                        app:smsp_errorText="false"
+                        app:smsp_arrowColor="#FFFFFF"
+                        app:smsp_enableErrorLabel="false"
+                        app:smsp_underlineColor="#FFFFFF"
+                        app:smsp_selectedItemListColor="#FF5252" />
+
+-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/transparents"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:id="@+id/textField1"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+
+
+                        android:hint="First Name*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtFname"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:focusable="true"
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:id="@+id/textField2"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Surname*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/txtSurname"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:textColor="?android:attr/textColorPrimary"
+
+
+
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:id="@+id/textField3"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Mobile*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/txtMobileNo"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:textColor="?android:attr/textColorPrimary"
+
+
+
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:id="@+id/textField4"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Email*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/txtEmail"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:textColor="?android:attr/textColorPrimary"
+
+
+
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:id="@+id/textField5"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Password*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/txtPassword"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:textColor="?android:attr/textColorPrimary"
+
+
+
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:id="@+id/textField6"
+
+                        app:hintTextColor="?android:attr/textColorPrimary"
+                        app:boxStrokeColor="?android:attr/textColorPrimary"
+                        android:background="@color/transparents"
+                        android:textColor="?android:attr/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="2dp"
+                        app:backgroundTint="@null"
+
+
+
+                        android:hint="Re-Type Password*">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/txtRetypePassword"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="2dp"
+                            android:textColor="?android:attr/textColorPrimary"
+
+
+
+                            android:importantForAutofill="no"
+                            android:textColorHint="#C1C1C1"
+
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+-->
+
+
+
+
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="2.65"
+                        app:backgroundTint="@null"
+                        android:contentDescription="Status"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:text="Gender" />
+
+                        <RadioButton
+                            android:id="@+id/radioNegative"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:buttonTint="@color/colorAccent"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:checked="true"
+                            android:text="@string/radio_negative" />
+
+
+                        <RadioButton
+                            android:id="@+id/radioPositive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorAccent"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:text="@string/radio_positive" />
+
+                    </RadioGroup>
+
+
+
+
+
+
+
+                    <Button
+                        android:id="@+id/butReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_botton"
+                        android:text="Next"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

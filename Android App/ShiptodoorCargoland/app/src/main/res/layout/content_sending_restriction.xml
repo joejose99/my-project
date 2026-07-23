@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TrackingActivity"
+    tools:showIn="@layout/activity_sending_restriction">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp" >
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="#ffffff"
+
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_left_24"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="172dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-12dp"
+                        android:background="#FFFFFF"
+                        android:ems="10"
+                        android:text="Track Item"
+                        android:visibility="gone"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#D91F2B"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Item Restriction" />
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+
+
+
+
+                    <EditText
+
+                        android:id="@+id/txtTracking"
+                        android:layout_width="fill_parent"
+
+
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="2.65"
+                        android:background="@xml/text_style"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:minLines="14"
+                        android:scrollbars="vertical"
+                        android:inputType="textMultiLine"
+
+                        android:minHeight="20dp"
+
+                        android:focusable="false"
+                        android:enabled="false"
+
+                        android:padding="15dp"
+                        android:text="To apply with national and international reglations governing the carriage of mail,
+parcel, and ensure that mail in  transport does not present a danger to the general public, we restrict and prohibit certain items
+from our network. \n \n We want to ensure the mail is safe for everyone. Below are the restricted goods \n \n 1. Alcohol \n 2. Battery \n 3. Ammunition  "
+                        android:textColor="#666666"  />
+
+                    <RadioGroup
+                        android:id="@+id/radio_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="2.65"
+                        android:contentDescription="Status"
+                        android:orientation="horizontal">
+
+
+
+
+                        <RadioButton
+                            android:id="@+id/radioPositive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:checked="true"
+                            android:text="I Accept" />
+
+
+                        <RadioButton
+                            android:id="@+id/radioIntra_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="I Reject" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

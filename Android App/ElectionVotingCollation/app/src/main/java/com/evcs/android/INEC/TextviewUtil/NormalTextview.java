@@ -1,0 +1,34 @@
+package com.eciels.android.INEC.TextviewUtil;
+
+import android.content.Context;
+import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatTextView;
+
+import com.eciels.android.INEC.FontUtil.Font;
+
+/**
+ * Created by hp on 5/20/2018.
+ */
+
+public class NormalTextview extends AppCompatTextView {
+    public NormalTextview(Context context) {
+        super(context);
+        setFont(context);
+    }
+
+    public NormalTextview(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setFont(context);
+    }
+
+    public NormalTextview(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        setFont(context);
+    }
+
+    private void setFont(Context context) {
+        setTypeface(Font.ubuntu_regular_font(context));
+    }
+}
+

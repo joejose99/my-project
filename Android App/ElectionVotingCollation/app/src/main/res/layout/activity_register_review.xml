@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:showIn="@layout/activity_register_review">
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="#ffffff"
+                        app:backgroundTint="@null"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_backspace_24"
+                        android:textColor="#D91F2B"
+                        android:textSize="54sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="-45dp"
+                        android:background="#FFFFFF"
+                        android:ems="10"
+                        android:text="Review"
+
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic" />
+
+
+
+
+
+                </LinearLayout>
+                <!-- Text line starts here -->
+                <LinearLayout
+                    android:id="@+id/linearLayout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+
+
+
+                    <TextView
+                        android:id="@+id/lev1"
+                        android:layout_width="match_parent"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreen"
+                        android:ems="10"
+
+                        android:background="@drawable/line_indicator_green"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPersonName"
+                        android:gravity="bottom|center"
+                        android:text="Name" />
+
+
+                    <TextView
+                        android:id="@+id/lev2"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Email" />
+
+                    <TextView
+                        android:id="@+id/lev3"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+
+                        android:gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Password" />
+
+
+
+                    <TextView
+                        android:id="@+id/lev4"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:paddingBottom="0dp"
+                        android:gravity="bottom|center"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/line_indicator_green"
+                        android:text="Address" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+                        android:singleLine="false"
+                        android:layout_marginBottom="20dp"
+                        android:inputType="textMultiLine"
+                        android:text=" Kindly review all the data entered to avoid error" />
+
+
+
+                    <Button
+                        android:id="@+id/btn_rev_kg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_login_button"
+                        android:text="** Name (edit) ** \n \n First Name: \n Surname: \n Gender: \n "
+                        android:gravity="left"
+                        android:padding="10dp"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#ffffff" />
+
+
+
+
+
+                    <Button
+                        android:id="@+id/btn_rev_price"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_login_button"
+                        android:text="** Email (edit) **  \n \n Email: \n Confirm Email:"
+
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#ffffff" />
+
+
+
+
+
+                    <Button
+                        android:id="@+id/btn_rev_pickup"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+
+                        app:backgroundTint="@null"
+                        android:gravity="left"
+                        android:padding="10dp"
+
+                        android:background="@drawable/background_login_button"
+                        android:text="** Address (edit) **  \n  \n City/Town:  \n State:  \n LGA \n Mobile No: \n Bus-Stop: \n St Address:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#ffffff" />
+
+
+
+
+                    <Button
+                        android:id="@+id/btn_others"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+
+                        app:backgroundTint="@null"
+                        android:gravity="left"
+                        android:padding="10dp"
+android:visibility="gone"
+                        android:background="@drawable/background_login_button"
+                        android:text="** Others (edit) **  \n  \n Birth-Day:  \n Member Status:  \n Profession  \n Church Unit:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#ffffff" />
+
+
+
+
+
+
+
+
+
+
+
+
+                    <Button
+                        android:id="@+id/butReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/background_botton"
+                        android:text="Submit "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

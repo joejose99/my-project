@@ -1,0 +1,126 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmSalpuup
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSalpuup))
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox
+        Me.TextBox2 = New System.Windows.Forms.TextBox
+        Me.Panel2 = New System.Windows.Forms.Panel
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.dtSalGrad = New System.Windows.Forms.DataGridView
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Panel2.SuspendLayout()
+        CType(Me.dtSalGrad, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.CheckBox2.Location = New System.Drawing.Point(342, 13)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(120, 19)
+        Me.CheckBox2.TabIndex = 217
+        Me.CheckBox2.Text = "Dont Close Me"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.TextBox2.Location = New System.Drawing.Point(194, 12)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(129, 20)
+        Me.TextBox2.TabIndex = 214
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.MenuText
+        Me.Panel2.Controls.Add(Me.CheckBox2)
+        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Location = New System.Drawing.Point(-67, -1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(511, 42)
+        Me.Panel2.TabIndex = 222
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(110, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(59, 15)
+        Me.Label5.TabIndex = 212
+        Me.Label5.Text = "Position"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Position Code"
+        Me.Column1.Name = "Column1"
+        '
+        'dtSalGrad
+        '
+        Me.dtSalGrad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtSalGrad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        Me.dtSalGrad.Location = New System.Drawing.Point(12, 47)
+        Me.dtSalGrad.Name = "dtSalGrad"
+        Me.dtSalGrad.Size = New System.Drawing.Size(373, 183)
+        Me.dtSalGrad.TabIndex = 221
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Salary Grade"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Position"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 130
+        '
+        'frmSalpuup
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(400, 240)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.dtSalGrad)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.Name = "frmSalpuup"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.dtSalGrad, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dtSalGrad As System.Windows.Forms.DataGridView
+    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+End Class

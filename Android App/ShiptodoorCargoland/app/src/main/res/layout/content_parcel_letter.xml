@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ParcelLetterActivity"
+    tools:showIn="@layout/activity_parcel_letter">
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp" >
+
+                        <Button
+                            android:id="@+id/button2"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+
+                            android:layout_width="34dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:background="#ffffff"
+
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_left_24"
+                            android:textColor="#D91F2B"
+                            android:textSize="54sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtLogin"
+                            android:layout_width="172dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="-12dp"
+                            android:background="#FFFFFF"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:text="Send Itemes"
+                            android:visibility="gone"
+                            android:textSize="17sp"
+                            android:textStyle="bold|italic" />
+
+
+
+
+
+                    </LinearLayout>
+                    <!-- Text line starts here -->
+                    <LinearLayout
+                        android:id="@+id/linearLayout_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+
+                            android:id="@+id/lev01"
+                            android:layout_width="match_parent"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+
+                            android:textSize="14sp"
+                            android:textColor="@color/colorGreen"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:background="@drawable/line_indicator_green"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:inputType="textPersonName"
+                            android:gravity="bottom|center"
+                            android:text="Weight" />
+
+                        <TextView
+
+                            android:id="@+id/lev1"
+                            android:layout_width="match_parent"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="18dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorAsh"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:background="@drawable/line_indicator_ash"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:inputType="textPersonName"
+                            android:focusable="false"
+                            android:enabled="false"
+
+                            android:gravity="bottom|center"
+                            android:text="Pickup Address" />
+
+                        <TextView
+                            android:id="@+id/lev2"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:inputType="textPersonName"
+                            android:gravity="bottom|center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/colorAsh"
+                            android:textSize="14sp"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:background="@drawable/line_indicator_ash"
+                            android:text="Price" />
+
+                        <TextView
+                            android:id="@+id/lev3"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+
+                            android:gravity="bottom|center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="18dp"
+                            android:textColor="@color/colorAsh"
+                            android:textSize="14sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+
+                            android:importantForAutofill="no"
+
+                            android:background="@drawable/line_indicator_ash"
+                            android:text="Receiver" />
+
+
+<!--
+                        <TextView
+                            android:id="@+id/lev4"
+                            android:layout_width="match_parent"
+                            android:layout_height="41dp"
+                            android:paddingBottom="0dp"
+                            android:gravity="bottom|center"
+
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="18dp"
+                            android:textColor="@color/colorAsh"
+                            android:textSize="14sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:background="@drawable/line_indicator_ash"
+                            android:text="Review" />
+
+-->
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:text="Where is your Destination ?" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:textSize="15sp"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+                            android:text=" * denote mandatory" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="70dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:importantForAutofill="no"
+
+                            android:text="Freight Type:" />
+                        <RadioGroup
+                            android:id="@+id/radio_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="2.65"
+                            android:contentDescription="Status"
+                            android:orientation="horizontal">
+
+
+
+                            <RadioButton
+                                android:id="@+id/radioNegative"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0.5dp"
+                                android:checked="true"
+                                android:text="@string/radio_international" />
+
+
+                            <RadioButton
+                                android:id="@+id/radioPositive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/radio_local" />
+
+
+                            <RadioButton
+                                android:id="@+id/radioIntra_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/radio_intra_state" />
+
+                        </RadioGroup>
+
+
+
+                        <TextView
+                            android:id="@+id/txvCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+
+                            android:importantForAutofill="no"
+
+                            android:ems="10"
+
+                            android:text="Country:*" />
+
+<!--
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="15px"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/select3" />
+                            -->
+                        <!-- testing spinner
+
+                        app:smsp_errorText="This is error text. You can show it as single line or multiple lines using attr smsp_multilineError"
+ android:layout_height="wrap_content"
+                        -->
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="50dp"
+                            android:background="@xml/spinner_style"
+                            android:layout_marginTop="2dp"
+                            android:prompt="@string/select3"
+
+                             app:smsp_floatingLabelColor="#000000"
+                            app:smsp_floatingLabelText="Country"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint="Select"
+                            app:smsp_hintColor="#000000"
+                            app:smsp_itemColor="#000000"
+                            app:smsp_itemListColor="#000000"
+                            app:smsp_itemListHintBackgroundColor="#808080"
+                            app:smsp_itemListHintColor="#FFFFFF"
+                            app:smsp_multilineError="false"
+                            app:smsp_isSearchable="true"
+                            app:smsp_errorText="false"
+                            app:smsp_arrowColor="#FFFFFF"
+                            app:smsp_enableErrorLabel="false"
+                            app:smsp_underlineColor="#FFFFFF"
+                            app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+
+
+
+
+                        <TextView
+                            android:id="@+id/txvState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+
+                            android:importantForAutofill="no"
+
+                            android:ems="10"
+                            android:text="State:*" />
+                        <!--
+                        <Spinner
+                            android:id="@+id/spinnerState"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="20px"
+                            android:entries="@array/state_array"
+                            android:visibility="gone"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/select4" />
+-->
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spinnerState"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:entries="@array/state_array"
+                            android:layout_height="50dp"
+                            android:background="@xml/spinner_style"
+                            android:layout_marginTop="2dp"
+                            android:prompt="@string/select3"
+
+                            app:smsp_floatingLabelColor="#000000"
+                            app:smsp_floatingLabelText="State"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint="Select"
+                            app:smsp_hintColor="#000000"
+                            app:smsp_itemColor="#000000"
+                            app:smsp_itemListColor="#000000"
+                            app:smsp_itemListHintBackgroundColor="#808080"
+                            app:smsp_itemListHintColor="#FFFFFF"
+                            app:smsp_multilineError="false"
+                            app:smsp_isSearchable="true"
+                            app:smsp_errorText="false"
+                            app:smsp_arrowColor="#FFFFFF"
+                            app:smsp_enableErrorLabel="false"
+                            app:smsp_underlineColor="#FFFFFF"
+                            app:smsp_selectedItemListColor="#FF5252" />
+
+
+                        <TextView
+                            android:id="@+id/txvLGA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+
+                            android:importantForAutofill="no"
+
+                            android:ems="10"
+                            android:text="L.G.A:*" />
+
+                        <!--
+                        <Spinner
+                            android:id="@+id/spinnerLGA"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="15px"
+                            android:visibility="gone"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/select6" />
+
+                            -->
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spinnerLGA"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+
+                            android:layout_height="50dp"
+                            android:background="@xml/spinner_style"
+                            android:layout_marginTop="2dp"
+                            android:prompt="@string/select3"
+
+                            app:smsp_floatingLabelColor="#000000"
+                            app:smsp_floatingLabelText="Country"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint="Select"
+                            app:smsp_hintColor="#000000"
+                            app:smsp_itemColor="#000000"
+                            app:smsp_itemListColor="#000000"
+                            app:smsp_itemListHintBackgroundColor="#808080"
+                            app:smsp_itemListHintColor="#FFFFFF"
+                            app:smsp_multilineError="false"
+                            app:smsp_isSearchable="true"
+                            app:smsp_errorText="false"
+                            app:smsp_arrowColor="#FFFFFF"
+                            app:smsp_enableErrorLabel="false"
+                            app:smsp_underlineColor="#FFFFFF"
+                            app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+                        <TextView
+                            android:id="@+id/txtType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:ems="10"
+                            android:text="Freight Category:*" />
+
+                        <Spinner
+                            android:id="@+id/spinnerCategory"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="15px"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/select7" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/titleQuatity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+
+                            android:importantForAutofill="no"
+
+                            android:ems="10"
+                            android:text="Weight(Kg):*" />
+
+                        <!--
+                        <Spinner
+                            android:id="@+id/spinner4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="15px"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/selectQuantity" />
+-->
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spinner4"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="15px"
+
+                            android:layout_height="50dp"
+                            android:background="@xml/spinner_style"
+                            android:layout_marginTop="2dp"
+                            android:prompt="@string/selectQuantity"
+
+                            app:smsp_floatingLabelColor="#000000"
+                            app:smsp_floatingLabelText="Country"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint="Select"
+                            app:smsp_hintColor="#000000"
+                            app:smsp_itemColor="#000000"
+                            app:smsp_itemListColor="#000000"
+                            app:smsp_itemListHintBackgroundColor="#808080"
+                            app:smsp_itemListHintColor="#FFFFFF"
+                            app:smsp_multilineError="false"
+                            app:smsp_isSearchable="true"
+                            app:smsp_errorText="false"
+                            app:smsp_arrowColor="#FFFFFF"
+                            app:smsp_enableErrorLabel="false"
+                            app:smsp_underlineColor="#FFFFFF"
+                            app:smsp_selectedItemListColor="#FF5252" />
+
+
+
+
+
+
+<!--
+
+                        <TextView
+                            android:id="@+id/txtSenstivity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Semsitivity:*" />
+                        <Spinner
+                            android:id="@+id/spinner5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="20px"
+                            android:background="@xml/spinner_style"
+                            android:prompt="@string/select5" />
+
+                             android:visibility="gone"
+-->
+
+                        <Button
+                            android:id="@+id/send_restriction"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+
+                            android:background="@xml/button_review_white"
+                            android:text="See our Sending Restrictions "
+                            android:visibility="gone"
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="#D91F2B" />
+
+
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:ems="10"
+
+                            android:importantForAutofill="no"
+
+
+                            android:text="Item Description:*" />
+                        <EditText
+
+                            android:id="@+id/txtDescription"
+                            android:layout_width="fill_parent"
+
+
+                            android:layout_height="match_parent"
+
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="2.65"
+                            android:background="@xml/text_style"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="Item Description"
+
+                            android:inputType="textPersonName"
+                            android:minHeight="15dp"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#C1C1C1" />
+
+
+
+                        <Button
+                            android:id="@+id/butReg"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+
+                            android:background="@drawable/background_botton"
+                            android:text="Next "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

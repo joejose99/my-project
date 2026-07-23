@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- new code -->
+    <dimen name="heading_text_size">20sp</dimen>
+    <dimen name="label_text_size">16sp</dimen>
+    <dimen name="tagline_text_size">16sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+
+    <!-- Library dimensions -->
+    <dimen name="fvp_default_circle_radius">4dp</dimen>
+    <dimen name="fvp_default_circle_padding">12dp</dimen>
+
+</resources>

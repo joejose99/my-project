@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+
+
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/logo2b" />
+
+
+
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:ems="10"
+               android:textColor="?android:attr/textColorPrimary"
+                    android:text="Thanks for registering"
+                    android:textSize="19sp"
+                    android:textStyle="bold|italic" />
+
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine1"
+                    style="@style/Widget.AppCompat.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:ems="10"
+android:visibility="gone"
+
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text=" Thanks for registering with Cargoland Foods System.\n\n We have sent a message to your chosen email address, which you should have recieved already."
+                    android:focusable="false"
+                    android:enabled="false"
+
+                    android:textIsSelectable="false"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/viewMultiLine1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:ems="10"
+
+                    android:focusable="false"
+
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text=" Thanks for registering with Cargoland Foods System.\n\n We have sent a message to your chosen email address, which you should have recieved already."
+
+                    android:background="@color/transparents"
+                    android:textIsSelectable="false"
+                    android:textSize="17sp"
+                    />
+
+
+
+
+
+
+
+
+
+                <Button
+                    android:id="@+id/butReg"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/background_botton"
+                    android:text="Continue "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF" />
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+/*==================================================
+    GLOBAL
+==================================================*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*==================================================
+    TOP HEADER
+==================================================*/
+
+.topMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    overflow: hidden;
+    background: #3C8DBC;
+    z-index: 151;
+}
+
+.topMenuLogo {
+    float: left;
+    width: 160px;
+    height: 50px;
+    padding-top: 6px;
+
+    text-align: center;
+    color: #fff;
+
+    font-family: "Comic Sans MS", cursive;
+    font-size: 26px;
+
+    background: #367FA9;
+    z-index:152;
+}
+
+/*==================================================
+    MAIN NAVIGATION
+==================================================*/
+
+.mainNavBar {
+    display: block;
+}
+
+.mobileNavOpen {
+    display: none;
+    float: left;
+    width: 60px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+/*==================================================
+    RIGHT HEADER NAVIGATION
+==================================================*/
+
+#rightNav {
+    position: relative;
+    float: right;
+    width: 400px;
+}
+
+.rightNav {
+    position: relative;
+    float: right;
+    width: 80px;
+    margin: 20px 20px 0 5px;
+    text-align: right;
+    color: #fff;
+}
+
+.rightNavcolor {
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 2px;
+    margin: 10px 20px 0 5px;
+    color: #fff;
+}
+
+/*==================================================
+    TOOLTIPS
+==================================================*/
+
+.rightNavcolor .tooltiptext,
+.rightNavcolor .tooltiptextSetting {
+
+    visibility: hidden;
+    position: absolute;
+
+    width: 70px;
+    padding: 5px 0;
+
+    border-radius: 6px;
+
+    background: #000;
+    color: #fff;
+
+    text-align: center;
+    font-size: 12px;
+}
+
+.rightNavcolor .tooltiptext {
+    margin-top: 5px;
+    margin-left: 65px;
+}
+
+.rightNavcolor .tooltiptextSetting {
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.rightNavcolor:hover .tooltiptext,
+.rightNavcolor:hover .tooltiptextSetting {
+    visibility: visible;
+    z-index: 2;
+}
+
+/*==================================================
+    LEFT SIDEBAR
+==================================================*/
+
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 100%;
+
+    overflow: auto;
+    background: #222D32;
+    z-index:150;
+}
+
+.navbar {
+    position: fixed;
+    top: 48px;
+    left: 0;
+
+    width: 160px;
+    height:auto;
+
+/*
+    overflow: auto;
+    
+    */
+
+    background: #222D32;
+     z-index:150;
+}
+
+.navbar a {
+    display: block;
+
+    width: 100%;
+    padding: 7px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+
+    color: #8AA4AF;
+
+    border-bottom: 1px solid #2C3B41;
+}
+
+.navbar a:hover,
+.active {
+    background: #2C3B41;
+    color: #E6E6E6;
+    
+}
+
+/*==================================================
+    LEFT SLIDE NAVIGATION
+==================================================*/
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    margin-top: 48px;
+    padding-top: 60px;
+
+    overflow-x: hidden;
+
+    background: #222D32;
+
+    transition: .5s;
+    
+}
+
+.sidenav a {
+    display: block;
+
+    padding: 8px 8px 8px 32px;
+
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+
+    color: #8AA4AF;
+
+    border-bottom: 1px solid #2C3B41;
+
+    transition: .3s;
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
+
+/*
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color:#fff;
+    background-color:#ffffff;
+}
+
+*/
+
+
+.sidenav.closebtn {
+   
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+
+    transition: background .25s ease;
+}
+
+.closebtn:hover {
+    background: rgba(255,255,255,.15);
+}
+
+
+/*==================================================
+    RIGHT SLIDE NAVIGATION
+==================================================*/
+
+.right-sidenav {
+    position: fixed;
+    top: -55px;
+    right: 0;
+
+    width: 0;
+    height: 100%;
+
+    margin-top: 48px;
+    padding-top: 60px;
+
+    overflow-x: hidden;
+
+    background: #222D32;
+
+    transition: .5s;
+    z-index: 158;
+}
+
+.right-sidenav a {
+    display: block;
+
+    padding: 8px 8px 8px 32px;
+
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+
+    color: #8AA4AF;
+
+    border-bottom: 1px solid #2C3B41;
+
+    transition: .3s;
+}
+
+.right-sidenav a:hover {
+    color: #fff;
+}
+
+.right-sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/*==================================================
+    MAIN CONTENT
+==================================================*/
+
+#main {
+    padding: 16px;
+    transition: margin-left .5s;
+    
+}
+
+#chronoExample {
+    width: 98%;
+    min-width: 96%;
+    max-width: 98%;
+
+    margin: 0 12px 0 12px;
+    padding-top: 2%;
+
+    text-align: center;
+
+    transition: margin-left .5s;
+}
+
+/*==================================================
+    SMALL TABLETS
+==================================================*/
+
+@media screen and (max-width:500px) {
+
+    .navbar a {
+        display: block;
+        float: none;
+    }
+
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media screen and (max-width:450px) {
+
+    .navbar,
+    .navbar-menu,
+    #mainNavBar,
+    #navBar {
+        display: none;
+    }
+
+    .mobileNavOpen {
+        display: block;
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    .topMenuLogo {
+        width: 140px;
+        
+    }
+
+    #rightNav {
+        width: 170px;
+    }
+
+    .rightNavcolor {
+        width: 30px;
+        margin: 10px 3px 0;
+    }
+
+    #contact-us,
+    #spaceMobile,
+    .tooltiptextSetting {
+        display: none;
+    }
+
+    .rightNavcolor:hover .tooltiptext,
+    .rightNavcolor:hover .tooltiptextSetting {
+        display: none;
+        visibility: hidden;
+    }
+
+    .sidenav {
+        padding-top: 15px;
+       	z-index:7;
+    }
+
+    .sidenav a {
+        font-size: 14px;
+    }
+
+    #main2,
+    #main3,
+    #main4,
+    #main5,
+    #main6,
+    #main7 {
+        
+        width:100%;
+    }
+
+    #chronoExample {
+        width: 98%;
+        margin: 0 4px 0 4px;
+        overflow: hidden;
+    }
+
+}
